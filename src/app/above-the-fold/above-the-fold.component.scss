@@ -1,0 +1,116 @@
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    gap: 72px;
+}
+
+.title-and-Iam {
+    display: flex;
+    align-items: center;
+    // background-color: aquamarine;
+    height: 224px;
+}
+
+.iam {
+    // transform: rotate(-90deg);
+    // transform-origin: center;
+    writing-mode: vertical-rl;
+    /* Hier wird die vertikale Schreibrichtung festgelegt */
+    // text-orientation: sideways; /* Hier wird die Textausrichtung festgelegt */
+    // background-color: blueviolet;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-size: 90px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    height: 100%;
+}
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+}
+
+.title-name {
+    color: var(--White, #FFF);
+    font-family: 'Poppins';
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+}
+
+.title-frontend-developer {
+    color: #9747FF;
+    font-family: 'Poppins';
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.atf-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100vw;
+    max-width: 100%;
+    // background-color: #9747FF;
+    padding-right: 96px;
+    position: absolute;
+    bottom: 0;
+}
+
+.contact-options {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    flex-shrink: 0;
+    // background-color: aqua;
+}
+
+.contact-option-git {
+    display: flex;
+    align-items: center;
+    background-image: url("../../assets/img/git-Default.svg");
+    // src\app\above-the-fold\above-the-fold.component.scss
+    background-size: contain;
+    background-position: center;
+
+    img {
+        &:hover {
+            background-image: url("../../assets/img/git-hover.svg");
+        }
+    }
+}
+
+.green-line {
+    width: 100px;
+    height: 10px;
+    background-color: #70E61C;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.scroll-down-area {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 3px;
+
+    .text-scroll-down {
+        writing-mode: vertical-rl;
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        color: white;
+    }
+}
