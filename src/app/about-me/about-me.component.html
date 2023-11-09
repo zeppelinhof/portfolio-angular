@@ -1,1 +1,25 @@
-<p>about-me works!</p>
+<div class="content">
+    <div class="am-section">
+        <div class="headline-text">
+            About me
+        </div>
+        <div class="am-content">
+            <div class="">
+                Hi, I am a Front-end developer based in Neuwied, Germany (...)
+            </div>
+            <div *ngFor="let c of [0,1]" class="am-content-thingsToShare">
+                <div><img src={{images[c]}}></div>
+                <div class="normal-white-text">
+                    {{amContent[c]}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="picture-section">
+        <img src="../../assets/img/markus.png">
+        <img class="markus_background" src="../../assets/img/markus_background.svg">
+    </div>
+</div>
+<div class="gray_under_markus">
+    <img src="../../assets/img/markus_gray_beneath.svg">
+</div>

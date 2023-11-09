@@ -4,25 +4,45 @@ body {
     font-family: 'Poppins';
 }
 
-.around-green-btn{
-    height: 120px;
+.headline-text {
+    color: white;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 108px;
+}
+
+.normal-white-text {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: white;
+}
+
+.around-blue-btn{
+    height: 80px;
     width: 155px;
 }
-.green-btn {
-    display: inline-flex;
+
+.around-skill-btn{
+    height: 80px;
+    width: 180px;
+}
+
+.blue-btn {
+    display: inline-block;
     padding: 15px 30px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     color: white;
     border-radius: 10px;
-    background: #70E61C;
+    background: #00BEE8;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
     transition: 100ms ease-in-out;
     cursor: pointer;
     
     &:hover{
-        background-color: #9747FF;
+        background-color: #4B47FF;
         padding: 20px 40px;        
     }
 }

@@ -1,0 +1,52 @@
+.content {
+    display: flex;
+    justify-content: space-between;
+    // background-color: rosybrown;
+    margin-top: 100px;
+    margin-left: 100px;
+}
+
+.am-section {
+    max-width: 470px;
+}
+
+.am-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    gap: 35px;    
+}
+
+.am-content-thingsToShare {
+    display: flex;
+    gap: 35px;    
+}
+
+.picture-section{
+    position: relative;
+    width: 990px;
+
+    img{
+        position: absolute;
+        top: -100px;
+        left: 0;
+        width: 100%;
+        // clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+        
+        
+    }
+
+    .markus_background{
+        z-index: -1;
+    }
+}
+
+.gray_under_markus{
+    width: 100%;    
+    height: 540px;
+
+    img{
+        width: 100%;
+        
+    }
+}

@@ -10,15 +10,13 @@
             </div>
         </div>
     </div>
-    <div class="around-green-btn">
-        <div class="green-btn">Let's talk!</div>
+    <div class="around-blue-btn">
+        <div class="blue-btn">Let's talk!</div>
     </div>
     <div class="atf-bottom">
         <div class="contact-options">
-            <div class="green-line"></div>
-            <div class="contact-option-git"></div>
-            <div class="contact-option-mail"><img src="../assets/img/mail-Default.svg"></div>
-            <div class="contact-option-in"><img src="../assets/img/in-Default.svg"></div>
+            <div class="blue-line"></div>
+            <div *ngFor="let i of [0,1,2]" class="contact-option"><img src={{images[i]}}></div>
         </div>
         <div class="scroll-down-area">
             <div class="text-scroll-down">Scroll down</div>

@@ -7,6 +7,9 @@ import { HeaderComponent } from './header/header.component';
 import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { BlurBackgroundComponent } from './blur-background/blur-background.component';
+import { SkillsComponent } from './skills/skills.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { BlurBackgroundComponent } from './blur-background/blur-background.compo
     HeaderComponent,
     AboveTheFoldComponent,
     AboutMeComponent,
-    BlurBackgroundComponent
+    BlurBackgroundComponent,
+    SkillsComponent,
+    PortfolioComponent,
+    PortfolioProjectComponent
   ],
   imports: [
     BrowserModule,

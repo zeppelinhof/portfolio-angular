@@ -1,0 +1,17 @@
+.base-line-right {
+    height: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.base-line-left {
+    height: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.headline-text-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}

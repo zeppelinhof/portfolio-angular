@@ -1,0 +1,70 @@
+@import '../app.component.scss';
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 100px;
+}
+
+.languages-area {
+    display: flex;
+    gap: 91px;
+
+    .language-column {
+        display: flex;
+        flex-direction: column;
+        gap: 83px;
+
+        .oneLanguage-area {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 10px;
+            cursor: pointer;
+
+            .language-logo {
+                height: 60px;
+
+                &:hover {
+                    animation: bounce 0.2s ease-in-out;                    
+                }
+            }
+
+            @keyframes bounce {
+
+                50% {
+                    transform: translateY(-10px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            .language-name {
+                color: white;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+
+    }
+}
+
+.skill-text-area {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    
+
+    .green-line {
+        @extend .base-line-right;
+        width: 289px;
+        background-color: #1CE6B6;
+    }
+
+    .normal-white-text {
+        max-width: 70%;
+    }
+}
