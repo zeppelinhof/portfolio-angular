@@ -11,13 +11,11 @@
 
     &:hover {
         background-size: 180%;
-        filter: brightness(0.3);
 
         .project-explaination {
             display: flex;
             flex-direction: column;
             align-items: center;
-            filter: brightness(1) !important;
         }
     }
 }
@@ -27,6 +25,7 @@
     justify-content: flex-end;
     flex-direction: column;
     align-items: center;
+    filter: brightness(1);
 }
 
 .test-buttons {
@@ -71,6 +70,7 @@
     border-radius: 30px 30px 15px 15px;
     padding: 20px 20px;
     background-color: white;
+    margin-top: 10%;
 
     .project-title {
         // font-size: 32px;

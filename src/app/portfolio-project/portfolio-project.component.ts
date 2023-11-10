@@ -17,4 +17,27 @@ export class PortfolioProjectComponent {
     '../../assets/img/projects/laptop_ohne_Hintergrund/pokedex_begin.svg'
   ];
 
+  public projTitle: string[] = [
+    'El Pollo Loco',
+    'Join',
+    'Pokedex',
+    'Simple CRM',
+  ];
+
+  public projExplTxt: string[] = [
+    'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+    'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+    'A very Simple Customer Relationship Management system working with CRUD functionality.',
+    'Based on the PokeAPI a simple library that provides and catalogues pokemon information.'
+  ];
+
+  public usedLang: string[] = [
+    'JavaScript | HTML | CSS',
+    'Angular | TypeScript | HTML | CSS | Firebase',
+    'Angular | Firebase',
+    'JavaScript | HTML | CSS | Api ',
+  ];
 }
+
+
+//                EINFACH NÄCHSTE KOMPONENTE ERST MAL
