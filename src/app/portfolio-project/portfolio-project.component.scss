@@ -1,0 +1,24 @@
+.computer-standard {
+    min-width: 100%;
+    min-height: 100%;
+    background-position: center;
+    background-size: 100%;
+    border-radius: 15px;
+    transition: all 100ms ease-in;
+
+    &:hover {
+        cursor: pointer;
+        background-size: 180%;
+        filter: brightness(0.6);
+
+        .ersch{
+            display: flex;
+            transition: all 1s ease-in;
+        }
+    }
+}
+
+.ersch{
+    display: none;
+    
+}

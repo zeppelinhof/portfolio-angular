@@ -3,7 +3,7 @@
 $purpleLineWidth: 50px;
 $margin-left: 100px;
 
-.content{
+.content {
     margin-top: 100px;
 }
 
@@ -13,17 +13,38 @@ $margin-left: 100px;
     background-color: #4B47FF;
 }
 
-.headline-text-line-portfolio{
+.headline-text-line-portfolio {
     display: flex;
     align-items: center;
 }
 
-.headline-text{
+.headline-text {
     margin-left: calc($margin-left - $purpleLineWidth);
 }
 
-.defined-position{
+.defined-position {
     margin-left: $margin-left;
     max-width: 470px;
     margin-top: 35px;
+    margin-bottom: 75px;
+}
+
+.portfolio-projects {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: $margin-left;
+    margin-right: $margin-left;
+}
+
+.outer-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba($color: #00BEE8, $alpha: 1.0);
+    border-radius: 15px;
+    min-width: 400px;
+    aspect-ratio: 1/1;
+    flex-grow: 1;
 }

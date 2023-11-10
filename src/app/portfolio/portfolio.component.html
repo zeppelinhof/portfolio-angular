@@ -3,6 +3,9 @@
         <div class="purple-line"></div>
         <div class="headline-text">Portfolio</div>
     </div>
-    <div class="normal-white-text defined-position">I have gained experience in building projects with various front end technologies and concepts.</div>
+    <div class="normal-white-text defined-position">This page is a sample of my work! scroll down to view other projects I have develped.</div>
 
+    <div class="portfolio-projects">
+        <app-portfolio-project class="outer-box" *ngFor="let c of [0,1,2,3]" [projectIndex]="c"></app-portfolio-project>
+    </div>
 </div>
