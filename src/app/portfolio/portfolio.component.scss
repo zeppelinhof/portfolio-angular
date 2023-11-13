@@ -5,6 +5,7 @@ $viewport: 100vw;
 
 .content {
     margin-top: 100px;
+    position: relative;
 }
 
 .purple-line {
@@ -15,10 +16,10 @@ $viewport: 100vw;
 
 .headline-text-line-portfolio {
     display: flex;
-    align-items: center;    
+    align-items: center;
 }
 
-.grid-wrap{
+.grid-wrap {
     display: flex;
     justify-content: center;
     $box-width: calc($viewport/2 - $left-right-distance - $grid-gap);
@@ -30,7 +31,7 @@ $viewport: 100vw;
     }
 }
 
-.outer-box{
+.outer-box {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,4 +39,52 @@ $viewport: 100vw;
     border-radius: 15px;
     width: 100%;
     aspect-ratio: 1/1;
+}
+
+.blur-wrap {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: -1;
+    overflow: hidden;
+
+    .wrap2 {
+        position: relative;
+        right: 0;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 800px;
+        }
+    }
+}
+
+
+
+
+
+.blur-wrap-second {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    z-index: -1;
+    overflow: hidden;
+
+    .wrap2 {
+        position: relative;
+        left: 0;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 800px;
+        }
+    }
 }

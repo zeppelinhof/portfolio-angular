@@ -2,6 +2,7 @@
 
 .content {
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
     border-top: 4px solid #00BEE8;
@@ -53,4 +54,30 @@
 
 .right-part {
     margin-right: $left-right-distance;
+}
+
+
+$blur-shift: 500px;
+
+.blur-wrap {
+    position: absolute;
+    top: -$blur-shift;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: -1;
+    overflow: hidden;
+
+    .wrap2 {
+        position: relative;
+        right: 0;
+        height: $blur-shift;
+        display: flex;
+        justify-content: center;
+
+        img {
+            height: 800px;
+        }
+    }
 }

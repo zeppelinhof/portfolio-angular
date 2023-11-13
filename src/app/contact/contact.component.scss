@@ -4,6 +4,7 @@
 $viewport: 100vw;
 
 .content {
+    position: relative;
     display: flex;
     justify-content: space-between;
 }
@@ -123,9 +124,11 @@ textarea:focus {
     cursor: pointer;
 }
 
-.go-up-arrow{
-   display: flex;
-   justify-content: flex-end;
-   margin-right: $left-right-distance;
-   margin-bottom: $left-right-distance;
+.go-up-arrow {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: $left-right-distance;
+    margin-bottom: $left-right-distance;
 }
+
+
