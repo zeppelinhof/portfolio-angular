@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ImprintComponent } from './imprint/imprint.component';
-import { AppComponent } from './app.component';
-import { AboveTheFoldComponent } from './above-the-fold/above-the-fold.component';
-import { AboutMeComponent } from './about-me/about-me.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+
 
 const routes: Routes = [
-  {path: '', component: AboutMeComponent},
-  {path: '', component: AboveTheFoldComponent},
+  {path: '', component: MainpageComponent},
   {path: 'imprint', component: ImprintComponent}
 ];
 

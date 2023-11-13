@@ -8,7 +8,6 @@ export class ScrollServiceService {
   constructor() { }
 
   scrollTo(elementid:string) {
-    debugger
     const element = document.getElementById(elementid);
     if (element) {
       const offset = 200;

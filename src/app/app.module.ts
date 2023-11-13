@@ -14,7 +14,8 @@ import { ContactComponent } from './contact/contact.component';
 import{MatCheckboxModule} from '@angular/material/checkbox';
 import { FooterComponent } from './footer/footer.component';
 import { ContactOptionsComponent } from './contact-options/contact-options.component';
-import { ImprintComponent } from './imprint/imprint.component'
+import { ImprintComponent } from './imprint/imprint.component';
+import { MainpageComponent } from './mainpage/mainpage.component'
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ImprintComponent } from './imprint/imprint.component'
     ContactComponent,
     FooterComponent,
     ContactOptionsComponent,
-    ImprintComponent
+    ImprintComponent,
+    MainpageComponent
   ],
   imports: [
     BrowserModule,
