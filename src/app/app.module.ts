@@ -13,7 +13,8 @@ import { PortfolioProjectComponent } from './portfolio-project/portfolio-project
 import { ContactComponent } from './contact/contact.component';
 import{MatCheckboxModule} from '@angular/material/checkbox';
 import { FooterComponent } from './footer/footer.component';
-import { ContactOptionsComponent } from './contact-options/contact-options.component'
+import { ContactOptionsComponent } from './contact-options/contact-options.component';
+import { ImprintComponent } from './imprint/imprint.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ContactOptionsComponent } from './contact-options/contact-options.compo
     PortfolioProjectComponent,
     ContactComponent,
     FooterComponent,
-    ContactOptionsComponent
+    ContactOptionsComponent,
+    ImprintComponent
   ],
   imports: [
     BrowserModule,

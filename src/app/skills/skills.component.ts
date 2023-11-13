@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ScrollServiceService } from '../scroll.service.service';
 
 @Component({
   selector: 'app-skills',
@@ -6,6 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
+
+  constructor(private scrollservice: ScrollServiceService){}
+
   logos: String[] = [
     '../../assets/img/language_logo/javascript_logo.svg',
     '../../assets/img/language_logo/git_logo.svg',
@@ -31,5 +35,9 @@ export class SkillsComponent {
     'CSS',
     'HTML'
   ];
+
+  scroll(elementid:string){
+    this.scrollservice.scrollTo(elementid);
+  }
 
 }
