@@ -1,4 +1,4 @@
-<div>
+<div id="contact">
     <div class="headline-text-line">
         <div class="emptySpace"></div>
         <div class="headline-text">Contact</div>
@@ -27,8 +27,8 @@
         <textarea placeholder="Your message"></textarea>
         <div class="check-send-area">
             <div class="read-area">
-                <div class="check-text">
-                    <div (click)="changeCheckbox()">
+                <div (click)="changeCheckbox()" class="check-text">
+                    <div>
                         <img *ngIf="isChecked" src="../../assets/img/form/checked_box.svg">
                         <img *ngIf="!isChecked" src="../../assets/img/form/check_box.svg">
                     </div>

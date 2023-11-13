@@ -3,7 +3,6 @@
 .content {
     display: flex;
     justify-content: space-between;
-    // background-color: rosybrown;
     margin-top: 100px;
     margin-left: $left-right-distance;
 }
@@ -27,6 +26,7 @@
 .picture-section{
     position: relative;
     width: 990px;
+    height: 700px;
 
     img{
         position: absolute;
@@ -43,15 +43,17 @@
     }
 }
 
-.gray_under_markus{
-    position: relative;
+.gray-under-markus{
+    position: absolute;
+    left: 0;
+    top: -350px;
     width: 100%;    
     height: 740px;
     overflow: hidden;
+    z-index: -1;
 
     img{
         position: absolute;
         width: 100%;
-        
     }
 }
