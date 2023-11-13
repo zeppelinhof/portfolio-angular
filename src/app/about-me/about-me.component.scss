@@ -1,9 +1,11 @@
+@import '../app.component.scss';
+
 .content {
     display: flex;
     justify-content: space-between;
     // background-color: rosybrown;
     margin-top: 100px;
-    margin-left: 100px;
+    margin-left: $left-right-distance;
 }
 
 .am-section {

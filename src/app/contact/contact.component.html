@@ -1,0 +1,43 @@
+<div>
+    <div class="headline-text-line">
+        <div class="emptySpace"></div>
+        <div class="headline-text">Contact</div>
+        <div class="blue-line"></div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="grid-container">
+        <div style="display: flex; align-items: center;">
+            <div class="green-line"></div>
+        </div>
+        <div class="smaller-headline">Got a problem to solve?</div>
+        <div class="emptySpace"></div>
+        <div class="normal-white-text">
+            Contact me through this form, I am interested in
+            hearing you, knowing your ideas and contributing
+            to your projects with my work. <br><br>
+            Need a Frontend developer? <b>Contact me!</b></div>
+    </div>
+
+    <div class="form-area">
+        <input class="input-normal" type="text" placeholder="Your name">
+        <input class="input-normal" type="email" placeholder="Your email">
+        <textarea placeholder="Your message"></textarea>
+        <div class="check-send-area">
+            <div class="read-area">
+                <div class="check-text">
+                    <div (click)="changeCheckbox()">
+                        <img *ngIf="isChecked" src="../../assets/img/form/checked_box.svg">
+                        <img *ngIf="!isChecked" src="../../assets/img/form/check_box.svg">
+                    </div>
+                    <div class="read-text">I've read the privacy policy and agree to the processing of my data as
+                        outlined.</div>
+                </div>
+            </div>
+            <div class="gray-btn">Send message :)</div>
+        </div>
+    </div>
+</div>
+<div class="go-up-arrow"><img src="../../assets/img/go-up-btn.svg" style="cursor: pointer;"></div>

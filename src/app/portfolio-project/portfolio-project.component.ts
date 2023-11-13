@@ -38,6 +38,3 @@ export class PortfolioProjectComponent {
     'JavaScript | HTML | CSS | Api ',
   ];
 }
-
-
-//                EINFACH NÄCHSTE KOMPONENTE ERST MAL

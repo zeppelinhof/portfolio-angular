@@ -10,6 +10,10 @@ import { BlurBackgroundComponent } from './blur-background/blur-background.compo
 import { SkillsComponent } from './skills/skills.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
+import { ContactComponent } from './contact/contact.component';
+import{MatCheckboxModule} from '@angular/material/checkbox';
+import { FooterComponent } from './footer/footer.component';
+import { ContactOptionsComponent } from './contact-options/contact-options.component'
 
 @NgModule({
   declarations: [
@@ -20,11 +24,15 @@ import { PortfolioProjectComponent } from './portfolio-project/portfolio-project
     BlurBackgroundComponent,
     SkillsComponent,
     PortfolioComponent,
-    PortfolioProjectComponent
+    PortfolioProjectComponent,
+    ContactComponent,
+    FooterComponent,
+    ContactOptionsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatCheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

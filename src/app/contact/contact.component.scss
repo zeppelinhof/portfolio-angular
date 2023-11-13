@@ -1,0 +1,130 @@
+@import '../app.component.scss';
+
+
+$viewport: 100vw;
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.emptySpace {
+    flex: 1;
+}
+
+.headline-text {
+    margin: $left-right-distance;
+    padding-left: 36px;
+    padding-right: 36px;
+}
+
+.blue-line {
+    @extend .base-line-right;
+    // width: $oneThirdOfViewport;
+    flex: 1;
+    background-color: #00BEE8;
+}
+
+.green-line {
+    @extend .base-line-left;
+    background-color: #1CE6B6;
+    width: 80%;
+}
+
+.smaller-headline {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white
+}
+
+.form-area {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-right: $left-right-distance;
+    color: white;
+
+
+    .input-normal,
+    textarea {
+        padding: 15px 25px 15px 25px;
+        border: 1px solid #4B47FF;
+        border-radius: 10px;
+        background-color: #141D2F;
+        width: calc($viewport/2 - $left-right-distance);
+        color: white;
+
+
+    }
+
+    textarea {
+        font-family: 'Poppins';
+    }
+}
+
+.input-normal::placeholder {
+    color: white;
+}
+
+.input-normal:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    color: white;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.check-send-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.read-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    .check-text {
+        display: flex;
+        gap: 8px;
+    }
+
+    .read-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
+
+.gray-btn {
+    display: inline-flex;
+    padding: 15px 30px;
+    width: 250px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border-radius: 10px;
+    background: #B6B6B6;
+    cursor: pointer;
+}
+
+.go-up-arrow{
+   display: flex;
+   justify-content: flex-end;
+   margin-right: $left-right-distance;
+   margin-bottom: $left-right-distance;
+}

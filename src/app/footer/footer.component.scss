@@ -1,0 +1,56 @@
+@import '../app.component.scss';
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px solid #00BEE8;
+    width: 100%;
+    color: white;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.left-part {
+    margin-left: $left-right-distance;
+
+    .impressum {
+        position: relative;
+        font-size: 16px;
+        font-weight: 400;
+        padding: 5px 0px;
+        cursor: pointer;
+    }
+
+    .impressum:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        background-color: #00BEE8;
+        height: 3px;
+        width: 0;
+        transition: 100ms;
+    }
+
+    .impressum:hover::after{
+        width: 45px;
+    }
+}
+
+.middle-part {
+    font-weight: 400;
+    font-size: 24px;
+
+}
+
+.right-part {
+    margin-right: $left-right-distance;
+}

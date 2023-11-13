@@ -1,7 +1,5 @@
 @import '../app.component.scss';
 
-$purpleLineWidth: 50px;
-$margin-left: 100px;
 
 .content {
     margin-top: 100px;
@@ -9,8 +7,8 @@ $margin-left: 100px;
 
 .purple-line {
     @extend .base-line-left;
-    width: $purpleLineWidth;
     background-color: #4B47FF;
+    width: 80%;
 }
 
 .headline-text-line-portfolio {
@@ -19,14 +17,6 @@ $margin-left: 100px;
 }
 
 .headline-text {
-    margin-left: calc($margin-left - $purpleLineWidth);
-}
-
-.defined-position {
-    margin-left: $margin-left;
-    max-width: 470px;
-    margin-top: 35px;
-    margin-bottom: 75px;
 }
 
 .portfolio-projects {
@@ -35,8 +25,8 @@ $margin-left: 100px;
     align-items: center;
     gap: 12px;
     width: 100%;
-    margin-left: $margin-left;
-    margin-right: $margin-left;
+    margin-left: $left-right-distance;
+    margin-right: $left-right-distance;
 }
 
 .outer-box{

@@ -70,31 +70,18 @@
     bottom: 24px;
 }
 
-.contact-options {
+.line-and-options{
     display: flex;
     align-items: center;
-    gap: 42px;
-    flex-shrink: 0;
-    // background-color: aqua;
 }
 
-.contact-option {
-    display: flex;
-    align-items: center;
-    height: 30px;
-    cursor: pointer;
-    transition: 100ms ease-in-out;
-
-    img {
-        &:hover {
-            height: 40px;
-        }
-    }
+.wrap-blue-line{
+    width: $left-right-distance;
 }
 
 .blue-line {
     @extend .base-line-left;
-    width: 100px;
+    width: 80%;
     background-color: #00BEE8;
 }
 
