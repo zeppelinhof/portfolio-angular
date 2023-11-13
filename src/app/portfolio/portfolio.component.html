@@ -6,18 +6,17 @@
         </div>
         <div class="headline-text">Portfolio</div>
         <div class="emptySpace"></div>
-        <div class="normal-white-text">This page is a sample of my work! scroll down to view other projects I have develped.</div>
+        <div class="normal-white-text">This page is a sample of my work! scroll down to view other projects I have
+            develped.</div>
     </div>
 
 
 
 
-    <div class="portfolio-projects">
-        <div style="display: flex; gap: 12px;">
-            <app-portfolio-project class="outer-box" *ngFor="let c of [0,1]" [projectIndex]="c"></app-portfolio-project>
-        </div>
-        <div style="display: flex; gap: 12px;">
-            <app-portfolio-project class="outer-box" *ngFor="let c of [2,3]" [projectIndex]="c"></app-portfolio-project>
+    <div class="grid-wrap">
+        <div class="portfolio-projects">
+            <app-portfolio-project class="outer-box" *ngFor="let c of [0,1,2,3]"
+                [projectIndex]="c"></app-portfolio-project>
         </div>
     </div>
 </div>

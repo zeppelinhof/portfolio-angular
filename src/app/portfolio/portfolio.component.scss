@@ -1,5 +1,7 @@
 @import '../app.component.scss';
 
+$grid-gap: 12px;
+$viewport: 100vw;
 
 .content {
     margin-top: 100px;
@@ -13,20 +15,19 @@
 
 .headline-text-line-portfolio {
     display: flex;
-    align-items: center;
+    align-items: center;    
 }
 
-.headline-text {
-}
-
-.portfolio-projects {
+.grid-wrap{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    width: 100%;
-    margin-left: $left-right-distance;
-    margin-right: $left-right-distance;
+    justify-content: center;
+    $box-width: calc($viewport/2 - $left-right-distance - $grid-gap);
+
+    .portfolio-projects {
+        display: grid;
+        grid-gap: $grid-gap;
+        grid-template-columns: $box-width $box-width;
+    }
 }
 
 .outer-box{
@@ -35,7 +36,6 @@
     align-items: center;
     border: 1px solid rgba($color: #00BEE8, $alpha: 1.0);
     border-radius: 15px;
-    width: 400px;
+    width: 100%;
     aspect-ratio: 1/1;
-    flex-grow: 1;
 }

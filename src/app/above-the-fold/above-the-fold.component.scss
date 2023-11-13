@@ -62,7 +62,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    width: 100vw;
     max-width: 100%;
     // background-color: #9747FF;
     // padding-right: 96px;
@@ -73,10 +72,6 @@
 .line-and-options{
     display: flex;
     align-items: center;
-}
-
-.wrap-blue-line{
-    width: $left-right-distance;
 }
 
 .blue-line {
