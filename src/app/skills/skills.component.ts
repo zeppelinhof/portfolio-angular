@@ -10,6 +10,10 @@ export class SkillsComponent {
 
   constructor(private scrollservice: ScrollServiceService){}
 
+  scroll(elementid:string){
+    this.scrollservice.scrollTo(elementid);
+  }
+
   logos: String[] = [
     '../../assets/img/language_logo/javascript_logo.svg',
     '../../assets/img/language_logo/git_logo.svg',
@@ -36,8 +40,6 @@ export class SkillsComponent {
     'HTML'
   ];
 
-  scroll(elementid:string){
-    this.scrollservice.scrollTo(elementid);
-  }
+  
 
 }

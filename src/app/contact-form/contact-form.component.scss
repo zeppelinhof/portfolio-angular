@@ -1,0 +1,85 @@
+@import '../app.component.scss';
+$viewport: 100vw;
+
+.form-area {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-right: $left-right-distance;
+    color: white;
+
+
+    .input-normal,
+    textarea {
+        padding: 15px 25px 15px 25px;
+        border: 1px solid #4B47FF;
+        border-radius: 10px;
+        background-color: #141D2F;
+        width: calc($viewport/2 - $left-right-distance);
+        color: white;
+        font-family: 'Poppins';
+        resize: none;
+    }
+}
+
+.input-normal::placeholder {
+    color: white;
+}
+
+.input-normal:focus {
+    outline: none;
+}
+
+textarea::placeholder {
+    color: white;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.check-send-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.read-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+
+    .check-text {
+        display: flex;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .read-text {
+        display: flex;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+}
+.gray-btn-wrap{
+    height: 50px;
+    width: 250px;
+} 
+
+.gray-btn {
+    display: inline-flex;
+    padding: 15px 30px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border-radius: 10px;
+    background: #B6B6B6;
+    cursor: pointer;
+}

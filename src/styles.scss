@@ -1,6 +1,6 @@
 // html, body { height: 100%; }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -8,7 +8,24 @@ body {
     margin: 0;
     background-color: #141D2F;
     font-family: 'Poppins';
-}
+    scrollbar-width: thin;
+    scrollbar-color: #333 transparent;
+  }
+  
+  body::-webkit-scrollbar {
+    width: 6px; /* Breite des Scrollbalkens */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #4B47FF; /* Farbe des Scrollbalken-Griffs */
+    border-radius: 3px
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: transparent; /* Farbe des Scrollbalken-Tracks */
+  }
+
+
 
 .headline-text {
     color: white;
@@ -24,13 +41,15 @@ body {
     color: white;
 }
 
-.around-skill-btn {
+.around-btn {
     height: 80px;
     width: 200px;
+    z-index: 1;
 }
 
 .blue-btn {
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     padding: 15px 30px;
     justify-content: center;
     align-items: center;
@@ -45,9 +64,9 @@ body {
     cursor: pointer;
 
     &:hover {
+        height: 40px;
+        width: 180px;
         background-color: #4B47FF;
-        transform: scale(1.5);
-        transform-origin: left top;
     }
 
 }
@@ -58,4 +77,19 @@ body {
     width: 150px;
     flex-shrink: 0;
     cursor: pointer;
+}
+
+
+// General reponsiveness
+
+@media (max-width: 720px){
+    .hide-mobile{
+        display: none;
+    }
+}
+
+@media (min-width: 720px){
+    .hide-desktop{
+        display: none;
+    }
 }

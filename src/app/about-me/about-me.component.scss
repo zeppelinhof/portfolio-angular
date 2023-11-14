@@ -27,12 +27,14 @@
     position: relative;
     width: 990px;
     height: 700px;
+    z-index: -1;
 
     img{
         position: absolute;
-        top: -100px;
+        top: -40px;
         left: 0;
-        width: 100%;
+        min-width: 400px;
+        max-width: 900px;
         // clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
         
         

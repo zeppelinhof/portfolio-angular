@@ -7,21 +7,10 @@ import { ScrollServiceService } from '../scroll.service.service';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  @Input() isChecked: boolean = false;
 
+  constructor(private scrollservice: ScrollServiceService) { }
 
-  changeCheckbox() {
-    // this.isChecked == true ? false : true;
-    if (this.isChecked) {
-      this.isChecked = false;
-    } else {
-      this.isChecked = true;
-    }
-  }
-
-  constructor(private scrollservice: ScrollServiceService){}
-
-  scroll(elementid:string){
+  scroll(elementid: string) {
     this.scrollservice.scrollTo(elementid);
   }
 

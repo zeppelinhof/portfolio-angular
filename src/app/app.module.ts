@@ -15,7 +15,10 @@ import{MatCheckboxModule} from '@angular/material/checkbox';
 import { FooterComponent } from './footer/footer.component';
 import { ContactOptionsComponent } from './contact-options/contact-options.component';
 import { ImprintComponent } from './imprint/imprint.component';
-import { MainpageComponent } from './mainpage/mainpage.component'
+import { MainpageComponent } from './mainpage/mainpage.component';
+import { ContactFormComponent } from './contact-form/contact-form.component'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataProtectionComponent } from './data-protection/data-protection.component';
 
 @NgModule({
   declarations: [
@@ -31,12 +34,16 @@ import { MainpageComponent } from './mainpage/mainpage.component'
     FooterComponent,
     ContactOptionsComponent,
     ImprintComponent,
-    MainpageComponent
+    MainpageComponent,
+    ContactFormComponent,
+    DataProtectionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
