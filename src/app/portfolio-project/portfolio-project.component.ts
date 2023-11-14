@@ -9,6 +9,7 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
 export class PortfolioProjectComponent {
 
   @Input() projectIndex: number = 0;
+  @Input() hovered: boolean = false;
 
   public imagesComputers: string[] = [
     '../../assets/img/projects/laptop_ohne_Hintergrund/pollo_loco_begin.svg',

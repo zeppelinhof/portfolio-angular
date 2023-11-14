@@ -22,6 +22,7 @@ $viewport: 100vw;
 .grid-wrap {
     display: flex;
     justify-content: center;
+    
     $box-width: calc($viewport/2 - $left-right-distance - $grid-gap);
 
     .portfolio-projects {

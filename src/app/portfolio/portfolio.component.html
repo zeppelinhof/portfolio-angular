@@ -13,7 +13,7 @@
     <div class="grid-wrap">
         <div class="portfolio-projects">
             <app-portfolio-project class="outer-box" *ngFor="let c of [0,1,2,3]"
-                [projectIndex]="c"></app-portfolio-project>
+                [projectIndex]="c" (mouseover)="setHovered()" (mouseleave)="setUnhovered()"></app-portfolio-project>
         </div>
     </div>
 
