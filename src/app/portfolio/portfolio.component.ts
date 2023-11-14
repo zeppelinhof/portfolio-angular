@@ -7,17 +7,5 @@ import { PortfolioProjectComponent } from '../portfolio-project/portfolio-projec
 })
 export class PortfolioComponent {
   @Input() showDetails: boolean = false;
-  @Input() val: boolean = false;
-
-
-  setHovered() {
-    debugger
-    this.val = true;
-  }
-
-  setUnhovered() {
-    debugger
-    this.val = false;
-  }
 
 }

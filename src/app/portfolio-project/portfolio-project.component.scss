@@ -1,4 +1,30 @@
-$fu: none;
+.wrap-background-explaination {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: all 100ms ease-in;
+
+    &:hover {
+        .project-explaination {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            filter: brightness(1);
+        }
+        .computer-standard{
+            background-size: 180%;
+            filter: brightness(0.3);
+        }
+    }
+}
 
 .computer-standard {
     display: flex;
@@ -8,22 +34,12 @@ $fu: none;
     background-position: center;
     background-size: contain;
     border-radius: 15px;
-    cursor: pointer;
-    transition: all 100ms ease-in;
 
-    &:hover {
-        background-size: 180%;
-        $fu: flex;
-        // filter: brightness(0.3);
-    }
+   
 }
 
 .project-explaination {
-    display: $fu;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    display: none;
 }
 
 .test-buttons {
