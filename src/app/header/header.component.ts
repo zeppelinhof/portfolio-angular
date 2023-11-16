@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ScrollServiceService } from '../scroll.service.service';
 
 @Component({
@@ -7,11 +7,20 @@ import { ScrollServiceService } from '../scroll.service.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
+  @Input() showBurgerMenu: Boolean = false;
 
-  constructor(private scrollservice: ScrollServiceService){}
+  constructor(private scrollservice: ScrollServiceService) { }
 
-  scroll(elementid:string){
+  scroll(elementid: string) {
     this.scrollservice.scrollTo(elementid);
+  }
+
+  showHamburgerMenu() {
+    if (this.showBurgerMenu == true) {
+      this.showBurgerMenu = false;
+    } else {
+      this.showBurgerMenu = true;
+    }
   }
 
 }

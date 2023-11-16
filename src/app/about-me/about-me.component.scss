@@ -26,22 +26,25 @@
 .picture-section{
     position: relative;
     width: 990px;
-    height: 700px;
-    z-index: -1;
+    // height: 700px;
+    // z-index: -1;
+    background-color: yellow;
+    // overflow: hidden;
 
     img{
         position: absolute;
-        top: -40px;
+        top: 0px;
         left: 0;
-        min-width: 400px;
-        max-width: 900px;
-        // clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
-        
-        
+        width: 100%;
+        z-index: -1;
     }
 
     .markus_background{
-        z-index: -1;
+        position: absolute;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        z-index: -2;
     }
 }
 

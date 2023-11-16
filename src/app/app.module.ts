@@ -19,6 +19,7 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { ContactFormComponent } from './contact-form/contact-form.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
+import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
     ImprintComponent,
     MainpageComponent,
     ContactFormComponent,
-    DataProtectionComponent
+    DataProtectionComponent,
+    HamburgerMenuComponent
   ],
   imports: [
     BrowserModule,

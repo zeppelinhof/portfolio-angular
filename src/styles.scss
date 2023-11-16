@@ -82,14 +82,14 @@ body {
 
 // General reponsiveness
 
-@media (max-width: 720px){
+@media (max-width: 920px){
     .hide-mobile{
-        display: none;
+        display: none !important;
     }
 }
-
-@media (min-width: 720px){
+// statt 720px
+@media (min-width: 920px){
     .hide-desktop{
-        display: none;
+        display: none !important;
     }
 }

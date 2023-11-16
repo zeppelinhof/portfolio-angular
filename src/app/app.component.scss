@@ -30,3 +30,7 @@ $left-right-distance: 100px;
     max-width: 500px;
     margin-bottom: 100px;
 }
+
+@media (max-width: 900px){
+    $left-right-distance: 25px !important;
+}

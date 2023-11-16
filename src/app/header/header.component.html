@@ -1,4 +1,4 @@
-<header>
+<header class="no-transparency-mobile">
     <img routerLink="/" class="img-logo" src="../../assets/img/logo-MG.png">
 
     <div class="header-links hide-mobile">
@@ -6,4 +6,10 @@
         <a routerLink="/" (click)="scroll('skills')">Skills</a>
         <a routerLink="/" (click)="scroll('portfolio')">Portfolio</a>
     </div>
+
+    <div class="hide-desktop">
+        <img class="hamburger" src="../../assets/img/burger-menu.svg" (click)="showHamburgerMenu()">
+    </div>
 </header>
+
+<app-hamburger-menu *ngIf="showBurgerMenu"></app-hamburger-menu>
