@@ -73,3 +73,14 @@
         max-width: 70%;
     }
 }
+
+@media(max-width: 920px){
+    .content{
+        flex-direction: column-reverse;
+    }
+
+    .skill-text-area{
+        align-items: flex-end;
+    }
+}
+

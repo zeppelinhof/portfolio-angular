@@ -3,6 +3,7 @@
 .content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     margin-top: 100px;
     margin-left: $left-right-distance;
 }
@@ -15,50 +16,61 @@
     display: flex;
     flex-direction: column;
     color: white;
-    gap: 35px;    
+    gap: 35px;
 }
 
 .am-content-thingsToShare {
     display: flex;
-    gap: 35px;    
+    gap: 35px;
 }
 
-.picture-section{
+.picture-section {
     position: relative;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: center;
     width: 990px;
+    height: 500px;
     // height: 700px;
-    // z-index: -1;
-    background-color: yellow;
+    z-index: -1;
+    // background-color: yellow;
     // overflow: hidden;
 
-    img{
+    img {
         position: absolute;
-        top: 0px;
-        left: 0;
-        width: 100%;
+        bottom: 0px;
+        max-width: 100%;
+        max-height: 100%;
         z-index: -1;
     }
 
-    .markus_background{
+    .markus_background {
         position: absolute;
-        top: 0px;
-        left: 0;
-        width: 100%;
+        bottom: 0px;
+        max-width: 100%;
+        max-height: 100%;
         z-index: -2;
     }
 }
 
-.gray-under-markus{
+.gray-under-markus-wrapper{
+    position: relative;
+    // background-color: yellow;
+    height: 100px;
+}
+
+.gray-under-markus {
     position: absolute;
     left: 0;
-    top: -350px;
-    width: 100%;    
+    // top: -350px;
+    width: 100%;
     height: 740px;
     overflow: hidden;
     z-index: -1;
 
-    img{
+    img {
         position: absolute;
         width: 100%;
     }
 }
+
