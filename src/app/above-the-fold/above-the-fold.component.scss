@@ -182,4 +182,8 @@
 
 .push-between {
     width: 500px;
+
+    @media(max-width: 900px){
+        width: 50px;
+    }
 }

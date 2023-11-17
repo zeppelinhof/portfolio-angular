@@ -8,9 +8,9 @@
     </div>
 
     <div class="hide-desktop">
-        <img class="hamburger" src="../../assets/img/burger-menu.svg" (click)="showHamburgerMenu()"> 
+        <img class="hamburger" src="../../assets/img/burger-menu.svg" (click)="menuChange()"> 
         <!--  -->
     </div>
 </header>
 
-<app-hamburger-menu *ngIf="showBurgerMenuParent"></app-hamburger-menu>
+<app-hamburger-menu *ngIf="showVar"></app-hamburger-menu>

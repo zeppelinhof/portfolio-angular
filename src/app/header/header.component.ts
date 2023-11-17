@@ -1,39 +1,39 @@
-import { AfterViewInit, Component, ViewChild, Input } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { ScrollServiceService } from '../scroll.service.service';
 import { HamburgerMenuComponent } from '../hamburger-menu/hamburger-menu.component';
+import { ObserversModule } from '@angular/cdk/observers';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements AfterViewInit {
+export class HeaderComponent implements OnInit {
 
-  @ViewChild(HamburgerMenuComponent)
-
-  hamburgermenu!: HamburgerMenuComponent;
-  showBurgerMenuParent: Boolean = false;
-
-  ngAfterViewInit() {
-    if (this.hamburgermenu) {
-      this.showBurgerMenuParent = this.hamburgermenu.showBurgerMenuChild;
-      console.log('showBurgerMenu:', this.showBurgerMenuParent);
-    }
-  }
+  // @ViewChild(HamburgerMenuComponent)
 
   constructor(private scrollservice: ScrollServiceService) { }
+  showVar: ObserversModule = this.scrollservice.data$;
+
+  ngOnInit() {
+    this.scrollservice.data$.subscribe((data) => {
+      this.showVar = data;
+    });
+  }
 
 
   scroll(elementid: string) {
     this.scrollservice.scrollTo(elementid);
   }
 
-  showHamburgerMenu() {
-    if (this.showBurgerMenuParent == true) {
-      this.showBurgerMenuParent = false;
+  menuChange() {
+    if (this.showVar == true) {
+      this.scrollservice.updateData(false);
     } else {
-      this.showBurgerMenuParent = true;
+      this.scrollservice.updateData(true);
     }
   }
+
+
 
 }

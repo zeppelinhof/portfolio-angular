@@ -31,7 +31,6 @@ export class FireMessagesService {
   }
 
   async updateMessages(item: {}) {
-    debugger
     if (this.docId) {
       await updateDoc(this.getSingleDocRef(this.colId, this.docId), item).catch(
         (err) => { console.log(err); }
