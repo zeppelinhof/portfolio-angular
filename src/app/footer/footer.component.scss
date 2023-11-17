@@ -17,10 +17,20 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    @media(max-width: 900px) {
+        flex-direction: column;
+        gap: 24px;
+    }
 }
 
 .left-part {
-    margin-left: $left-right-distance;
+    margin-left: $distance-100;
+
+    @media(max-width: 900px) {
+        margin-left: 0;
+        margin-bottom: 24px;
+    }
 
     .impressum {
         position: relative;
@@ -41,7 +51,7 @@
         transition: 100ms;
     }
 
-    .impressum:hover::after{
+    .impressum:hover::after {
         width: 45px;
     }
 }
@@ -53,8 +63,13 @@
 }
 
 .right-part {
-    margin-right: $left-right-distance;
+    margin-right: $distance-100;
+
+    @media(max-width: 900px) {
+        margin-right: 0;
+    }
 }
+
 
 
 $blur-shift: 500px;

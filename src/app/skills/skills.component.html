@@ -1,4 +1,9 @@
 <div id="skills" class="content">
+
+    <div (click)="scroll('contact')" class="around-btn hide-desktop">
+        <div class="blue-btn">Get in touch</div>
+    </div>
+
     <div class="languages-area">
         <div *ngFor="let col of [0,1,2,3]">
             <div *ngIf="col==0" class="language-column">
@@ -27,6 +32,8 @@
             </div>
         </div>
     </div>
+
+
     <div class="skill-text-area">
         <div class="headline-text-line">
             <div class="headline-text">Skills</div>
@@ -38,7 +45,7 @@
         <div class="normal-white-text">I have gained experience in building projects with various front end technologies
             and concepts.</div>
 
-        <div (click)="scroll('contact')" class="around-btn">
+        <div (click)="scroll('contact')" class="around-btn hide-mobile">
             <div class="blue-btn">Get in touch</div>
         </div>
     </div>

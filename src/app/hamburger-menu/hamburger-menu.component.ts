@@ -8,10 +8,13 @@ import { HeaderComponent } from '../header/header.component';
   styleUrls: ['./hamburger-menu.component.scss']
 })
 export class HamburgerMenuComponent {
-  constructor(private scrollservice: ScrollServiceService, private hc: HeaderComponent) { }
+  constructor(private scrollservice: ScrollServiceService) {
+
+  }
 
   scroll(elementid: string) {
     this.scrollservice.scrollTo(elementid);
+
   }
 
 }

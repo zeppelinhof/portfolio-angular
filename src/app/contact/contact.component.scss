@@ -1,10 +1,22 @@
 @import '../app.component.scss';
 
 
+@media(max-width: 900px) {
+    app-contact-form {
+        width: 100%;
+    }
+}
+
+
 .content {
     position: relative;
     display: flex;
     justify-content: space-between;
+
+    @media(max-width: 900px) {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 
@@ -13,9 +25,13 @@
 }
 
 .headline-text {
-    margin: $left-right-distance;
+    margin: $distance-100;
     padding-left: 36px;
     padding-right: 36px;
+
+    @media(max-width: 900px) {
+        margin: $distance-25;
+    }
 }
 
 .blue-line {
@@ -42,8 +58,17 @@
 .go-up-arrow {
     display: flex;
     justify-content: flex-end;
-    margin-right: $left-right-distance;
-    margin-bottom: $left-right-distance;
+    margin-right: $distance-100;
+    margin-bottom: $distance-100;
+
+    @media(max-width: 900px) {
+        margin-right: $distance-25;
+        margin-bottom: $distance-25;
+    }
 }
 
-
+@media(max-width: 900px) {
+    .grid-container {
+        max-width: 100%;
+    }
+}

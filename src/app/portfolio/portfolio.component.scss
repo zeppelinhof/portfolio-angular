@@ -22,8 +22,11 @@ $viewport: 100vw;
 .grid-wrap {
     display: flex;
     justify-content: center;
-    
-    $box-width: calc($viewport/2 - $left-right-distance - $grid-gap);
+    $box-width: calc($viewport/2 - $distance-100 - $grid-gap);
+
+    @media(max-width: 900px) {
+        $box-width: calc($viewport/2 - $distance-25 - $grid-gap);
+    }
 
     .portfolio-projects {
         display: grid;
@@ -64,10 +67,6 @@ $viewport: 100vw;
     }
 }
 
-
-
-
-
 .blur-wrap-second {
     position: absolute;
     bottom: 10px;
@@ -87,5 +86,18 @@ $viewport: 100vw;
         img {
             height: 800px;
         }
+    }
+}
+
+@media(max-width: 920px) {
+    .portfolio-projects {
+        display: block !important;
+        width: 100%;
+        margin-left: $distance-25;
+        margin-right: $distance-25;
+    }
+
+    .outer-box {
+        margin-top: 25px
     }
 }

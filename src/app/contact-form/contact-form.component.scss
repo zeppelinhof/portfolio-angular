@@ -5,20 +5,37 @@ $viewport: 100vw;
     display: flex;
     flex-direction: column;
     gap: 32px;
-    margin-right: $left-right-distance;
+    margin-right: $distance-100;
     color: white;
+    width: 100%;
+
+    @media(max-width: 900px) {
+        // align-items: center;
+        padding-left: $distance-25;
+        padding-right: $distance-25;
+        box-sizing: border-box;
+        // margin-left: $distance-25;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
 
 
     .input-normal,
     textarea {
         padding: 15px 25px 15px 25px;
         border: 1px solid #4B47FF;
+        box-sizing: border-box;
         border-radius: 10px;
         background-color: #141D2F;
-        width: calc($viewport/2 - $left-right-distance);
+        width: calc($viewport/2 - $distance-100);
         color: white;
         font-family: 'Poppins';
         resize: none;
+
+        @media(max-width: 900px) {
+            width: 100%;
+        }
     }
 }
 
@@ -41,8 +58,17 @@ textarea:focus {
 .check-send-area {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
+    // background-color: yellow;
+    width: 100%;
+
+    @media(max-width: 900px) {
+        align-items: center;
+        gap: 32px;
+
+    }
+
 }
 
 .read-area {
@@ -58,22 +84,27 @@ textarea:focus {
     }
 
     .read-text {
-        display: flex;
         font-size: 14px;
         font-weight: 400;
         line-height: 17px;
         letter-spacing: 0em;
         text-align: left;
+
+        a {
+            text-decoration: none;
+        }
     }
 }
-.gray-btn-wrap{
+
+.gray-btn-wrap {
     height: 50px;
     width: 250px;
-} 
+}
 
 .gray-btn {
     display: inline-flex;
     padding: 15px 30px;
+    box-sizing: border-box;
     width: 100%;
     justify-content: center;
     align-items: center;

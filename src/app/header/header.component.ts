@@ -8,6 +8,7 @@ import { ScrollServiceService } from '../scroll.service.service';
 })
 export class HeaderComponent {
   @Input() showBurgerMenu: Boolean = false;
+  @Input() burgerMenuOpen: Boolean = false;
 
   constructor(private scrollservice: ScrollServiceService) { }
 

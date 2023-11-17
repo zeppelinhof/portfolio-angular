@@ -11,11 +11,15 @@ header {
     top: 0;
     height: $header-height;
     z-index: 1;
-    padding: $padding-top-bottom $left-right-distance;
+    padding: $padding-top-bottom $distance-100;
     display: flex;
     align-items: center;
-    justify-content: space-between;    
+    justify-content: space-between;
     backdrop-filter: blur(32.5px);
+
+    @media(max-width: 900px) {
+        padding: $padding-top-bottom $distance-25;
+    }
 }
 
 .header-links {
@@ -36,12 +40,12 @@ a {
     cursor: pointer;
 }
 
-.hamburger{
+.hamburger {
     cursor: pointer;
 }
 
-@media (max-width: 920px){
-    .no-transparency-mobile{
+@media (max-width: 920px) {
+    .no-transparency-mobile {
         background-color: #141D2F;
     }
 }

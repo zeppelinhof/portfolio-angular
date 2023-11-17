@@ -1,7 +1,8 @@
-$left-right-distance: 100px;
+$distance-100: 100px;
+$distance-25: 25px;
 
 .wrap-line{
-    width: $left-right-distance;
+    width: $distance-100;
 }
 
 .base-line-right {
@@ -19,18 +20,19 @@ $left-right-distance: 100px;
 .headline-text-line {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    width: 100%;
 }
 
 .grid-container {
     display: grid;
     align-items: center;
-    grid-template-columns: $left-right-distance 1fr;
+    grid-template-columns: $distance-100 1fr;
     grid-row-gap: 36px;
     max-width: 500px;
     margin-bottom: 100px;
-}
 
-@media (max-width: 900px){
-    $left-right-distance: 25px !important;
+    @media(max-width: 900px){
+        grid-template-columns: $distance-25 1fr;
+    }
 }

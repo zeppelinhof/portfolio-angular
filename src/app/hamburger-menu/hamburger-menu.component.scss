@@ -12,7 +12,7 @@
     top: calc($header-height + (2 * $padding-top-bottom));
     left: 0;
     // background-color:brown;
-    z-index: 2;
+    z-index: 10000;
       
 
     .link-list{

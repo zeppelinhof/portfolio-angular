@@ -2,14 +2,25 @@
 
 .content {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 100px;
-    margin-left: $left-right-distance;
+    margin-left: $distance-100;
+
+    @media(max-width: 900px) {
+        flex-direction: column-reverse;
+        margin-left: $distance-25;
+    }
 }
 
 .am-section {
     max-width: 470px;
+
+    @media(max-width: 900px) {
+        margin-top: -150px;
+        z-index: 2;
+    }
 }
 
 .am-content {
@@ -26,7 +37,6 @@
 
 .picture-section {
     position: relative;
-    background-color: aquamarine;
     display: flex;
     justify-content: center;
     width: 990px;
@@ -35,6 +45,11 @@
     z-index: -1;
     // background-color: yellow;
     // overflow: hidden;
+
+    @media(max-width: 900px) {
+        width: 100vw;
+        left: -$distance-25;
+    }
 
     img {
         position: absolute;
@@ -53,24 +68,33 @@
     }
 }
 
-.gray-under-markus-wrapper{
+.gray-under-markus-wrapper {
     position: relative;
     // background-color: yellow;
     height: 100px;
+
+    // z-index: 1;
+    @media(max-width: 900px) {
+        z-index: 1;
+    }
 }
 
 .gray-under-markus {
     position: absolute;
     left: 0;
-    // top: -350px;
-    width: 100%;
+    top: -200px;
+    width: 100vw;
     height: 740px;
     overflow: hidden;
     z-index: -1;
+
+    @media(max-width: 900px) {
+        left: -$distance-25;
+    }
+
 
     img {
         position: absolute;
         width: 100%;
     }
 }
-

@@ -68,7 +68,11 @@
     font-style: normal;
     font-weight: 400;
     // line-height: 120%;
-    height: 260px;;
+    height: 260px;
+
+    @media (max-width: 900px){
+        font-size: 32px !important;
+    }
 }
 
 .title-name {
@@ -78,6 +82,10 @@
     font-style: normal;
     font-weight: 700;
     line-height: 120%;
+
+    @media (max-width: 900px){
+        font-size: 45px !important;
+    }
 }
 
 .title-frontend-developer {
@@ -87,22 +95,30 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%;
+
+    @media (max-width: 900px){
+        font-size: 30px !important;
+    }
 }
 
 .atf-bottom {
+    position: absolute;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     width: 100%;
     // background-color: #9747FF;
     // padding-right: 96px;
-    position: absolute;
+    // background-color: yellow;
     bottom: 24px;
 }
 
 .line-and-options {
     display: flex;
+    justify-content: center;
     align-items: center;
+    height: 50px;
+    width: 100%;
 }
 
 .blue-line {
@@ -116,7 +132,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-right: $left-right-distance;
+    margin-right: $distance-100;
     gap: 3px;
 
     .text-scroll-down {
@@ -139,6 +155,19 @@
     overflow: hidden;
 }
 
+.wrap-line{
+    position: absolute;
+    left: 0;
+}
+
+.two-contact-options{
+    position: absolute;
+    left: $distance-100;
+
+    @media(max-width: 900px){
+        left: calc(50% - ($distance-100 / 2));
+    }
+}
 
 
 .wrap2 {
