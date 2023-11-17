@@ -6,20 +6,20 @@ body {
     margin: 0;
     background-color: #141D2F;
     font-family: 'Poppins';
-    // scrollbar-width: thin;
-    // scrollbar-color: #333 transparent;
-    overflow-y:auto;
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+    overflow-y: scroll
     // overflow-x: hidden;
     // margin-right: -15px; 
 }
 
 body::-webkit-scrollbar {
-    width: 6px;
+    width: 0px;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: #4B47FF;
-    border-radius: 3px
+    background-color: transparent;
+    border-radius: 3px;
 }
 
 body::-webkit-scrollbar-track {

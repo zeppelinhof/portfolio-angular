@@ -6,7 +6,7 @@
     justify-content: center;
     align-items: center;
     background-color: #414856;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: calc(100vh - ($header-height + (2 * $padding-top-bottom)));
     top: calc($header-height + (2 * $padding-top-bottom));
