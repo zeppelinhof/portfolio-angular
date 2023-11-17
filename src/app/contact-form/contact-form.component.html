@@ -1,24 +1,27 @@
 <div class="form-area" (submit)="sendMail()" #myForm>
-    <input [(ngModel)]="inputName" required class="input-normal" type="text" placeholder="Your name" #nameField>
-    <input [(ngModel)]="inputMaildaddress" required class="input-normal" type="email" placeholder="Your email" name="email">
-    <textarea [(ngModel)]="inputMessage" required placeholder="Your message" name="messageInput" #messageField></textarea>
-    <div class="check-send-area">
-        <div class="read-area">
-            <div (click)="changeCheckbox()" class="check-text">
-                <div>
-                    <img *ngIf="isChecked" src="../../assets/img/form/checked_box.svg">
-                    <img *ngIf="!isChecked" src="../../assets/img/form/check_box.svg">
-                </div>
-                <div class="read-text">I've read the &nbsp;<a style="color: #4B47FF;" routerLink="/data-protection">
-                        privacy policy</a>&nbsp; and agree to the processing of my data as
-                    outlined.</div>
-            </div>
+  <input [(ngModel)]="inputName" required class="input-normal" type="text" placeholder="Your name" #nameField>
+  <input [(ngModel)]="inputMaildaddress" required class="input-normal" type="email" placeholder="Your email"
+    name="email">
+  <textarea [(ngModel)]="inputMessage" required placeholder="Your message" name="messageInput" #messageField></textarea>
+  <div class="check-send-area">
+    <div class="read-area">
+      <div (click)="changeCheckbox()" class="check-text">
+        <div>
+          <img *ngIf="isChecked" src="../../assets/img/form/checked_box.svg">
+          <img *ngIf="!isChecked" src="../../assets/img/form/check_box.svg">
         </div>
-        <div class="gray-btn-wrap">
-            <div *ngIf="isChecked" type="submit" class="gray-btn" (click)="sendToFirebase(inputName,inputMaildaddress,inputMessage)" #sendButton>Send message :)</div>
-        </div>
+        <div class="read-text">I've read the &nbsp;<a style="color: #4B47FF;" routerLink="/data-protection">
+            privacy policy</a>&nbsp; and agree to the processing of my data as
+          outlined.</div>
+      </div>
+    </div>
+    <div class="gray-btn-wrap">
+      <div *ngIf="isChecked" type="submit" class="gray-btn"
+        (click)="sendToFirebase(inputName,inputMaildaddress,inputMessage)" routerLink="/success-mail" #sendButton>Send
+        message :)</div>
     </div>
   </div>
+</div>
 
 <!-- NEU** -->
 <!-- <form >

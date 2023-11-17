@@ -1,0 +1,43 @@
+.container {
+    position: absolute;
+    top: 10%;
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 200px;
+    font-size: 80px;
+    color: white;
+    font-family: 'Poppins';
+    // height: calc(100vh - 400px);
+    line-height: 1;
+
+    @media(max-width: 900px) {
+        margin-left: 25px;
+        margin-right: 25px;
+        font-size: 45px;
+    }
+}
+
+.container:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    background-color: #00BEE8;
+    height: 4px;
+    width: 0;
+    transition: 1000ms ease-out;
+}
+
+.container:hover::after {
+    width: 30%;
+}
+
+:root {
+    -clr-1: #052b2f;
+    -clr-2: #073438;
+    -clr-3: #0e4b50;
+    -clr-4: #2d8f85;
+    -clr-5: #637c54;
+}

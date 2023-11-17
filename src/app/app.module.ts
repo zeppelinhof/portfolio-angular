@@ -22,6 +22,7 @@ import { DataProtectionComponent } from './data-protection/data-protection.compo
 import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { SuccessMailComponent } from './success-mail/success-mail.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     MainpageComponent,
     ContactFormComponent,
     DataProtectionComponent,
-    HamburgerMenuComponent
+    HamburgerMenuComponent,
+    SuccessMailComponent
   ],
   imports: [
     BrowserModule,
