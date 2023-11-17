@@ -1,4 +1,5 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
+import { FireMessagesService } from '../fire-messages.service';
 
 @Component({
   selector: 'app-contact-form',
@@ -12,6 +13,17 @@ export class ContactFormComponent {
   @ViewChild('#messageField') messageField!: ElementRef;
   @ViewChild('#sendButton') sendButton!: ElementRef;
 
+  inputName: string = '';
+  inputMaildaddress: string = '';
+  inputMessage: string = '';
+
+  constructor(private firemessage: FireMessagesService){}
+
+
+  sendToFirebase(name: string, mail: string, message:string){
+    this.firemessage.addMessage({'Name': mail, 'Mailaddress': mail, 'Message': message});
+  }
+
 
   changeCheckbox() {
     // this.isChecked == true ? false : true;
@@ -24,8 +36,8 @@ export class ContactFormComponent {
 
 
   sendMail() {
-    console.log('Send mail:', this.myForm);
-    this.nameField.nativeElement.disabled == true;
+    // console.log('Send mail:', this.myForm);
+    // this.nameField.nativeElement.disabled == true;
 
     // let nameField = this.nameField.nativeElement;
     // let messageField = this.messageField.nativeElement;

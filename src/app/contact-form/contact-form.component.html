@@ -1,7 +1,7 @@
-<form class="form-area" (submit)="sendMail()" #myForm>
-    <input required class="input-normal" type="text" placeholder="Your name" #nameField>
-    <input required class="input-normal" type="email" placeholder="Your email" name="email">
-    <textarea required placeholder="Your message" name="messageInput" #messageField></textarea>
+<div class="form-area" (submit)="sendMail()" #myForm>
+    <input [(ngModel)]="inputName" required class="input-normal" type="text" placeholder="Your name" #nameField>
+    <input [(ngModel)]="inputMaildaddress" required class="input-normal" type="email" placeholder="Your email" name="email">
+    <textarea [(ngModel)]="inputMessage" required placeholder="Your message" name="messageInput" #messageField></textarea>
     <div class="check-send-area">
         <div class="read-area">
             <div (click)="changeCheckbox()" class="check-text">
@@ -15,10 +15,10 @@
             </div>
         </div>
         <div class="gray-btn-wrap">
-            <div *ngIf="isChecked" type="submit" class="gray-btn" #sendButton>Send message :)</div>
+            <div *ngIf="isChecked" type="submit" class="gray-btn" (click)="sendToFirebase(inputName,inputMaildaddress,inputMessage)" #sendButton>Send message :)</div>
         </div>
     </div>
-</form>
+  </div>
 
 <!-- NEU** -->
 <!-- <form >
