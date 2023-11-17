@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "portfolio-4470b": {
+      "hosting": {
+        "portfolio-markus-gede": [
+          "portfolio-4470b"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "portfolio-4470b"
+  }
+}

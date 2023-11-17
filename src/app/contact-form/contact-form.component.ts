@@ -23,40 +23,54 @@ export class ContactFormComponent {
   }
 
 
-  sendMail(event: any) {
-    debugger
+  sendMail() {
+    console.log('Send mail:', this.myForm);
+    this.nameField.nativeElement.disabled == true;
 
+    // let nameField = this.nameField.nativeElement;
+    // let messageField = this.messageField.nativeElement;
+    // let sendButton = this.sendButton.nativeElement;
 
-    let nameField = this.nameField.nativeElement;
-    let messageField = this.messageField.nativeElement;
-    let sendButton = this.sendButton.nativeElement;
+    // nameField.disabled = true;
+    // messageField.disabled = true;
+    // sendButton.disabled = true;
 
-    nameField.disabled = true;
-    messageField.disabled = true;
-    sendButton.disabled = true;
+    // event.preventDefault();
+    // const data = new FormData(event.target);
 
+    // fetch("https://formspree.io/f/xaygzdbb", {
+    //   method: "POST",
+    //   body: new FormData(event.target),
+    //   headers: {
+    //     'Accept': 'application/json'
+    //   }
+    // }).then(() => {
+    //   window.location.href = "./success.html";
+    // }).catch((error) => {
+    //   console.log(error);
+    // });
 
-
-
-    event.preventDefault();
-    const data = new FormData(event.target);
-
-    fetch("https://formspree.io/f/xeqbvwnb", {
-      method: "POST",
-      body: new FormData(event.target),
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(() => {
-      window.location.href = "./success.html";
-    }).catch((error) => {
-      console.log(error);
-    });
-
-    nameField.disabled = false;
-    messageField.disabled = false;
-    sendButton.disabled = false;
+    // nameField.disabled = false;
+    // messageField.disabled = false;
+    // sendButton.disabled = false;
 
   }
 
+  // sendMail(event: any) {
+  //   debugger
+  //   event.preventDefault();
+  //   const data = new FormData(event.target);
+
+  //   fetch("https://formspree.io/f/xaygzdbb", {
+  //     method: "POST",
+  //     body: new FormData(event.target),
+  //     headers: {
+  //       'Accept': 'application/json'
+  //     }
+  //   }).then(() => {
+  //     window.location.href = "./success.html";
+  //   }).catch((error) => {
+  //     console.log(error);
+  //   });
+  // }
 }

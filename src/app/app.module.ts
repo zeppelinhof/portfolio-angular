@@ -20,6 +20,8 @@ import { ContactFormComponent } from './contact-form/contact-form.component'
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DataProtectionComponent } from './data-protection/data-protection.component';
 import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.componen
     AppRoutingModule,
     MatCheckboxModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp({"projectId":"portfolio-4470b","appId":"1:45401461044:web:36e3d17cac1647b605d561","storageBucket":"portfolio-4470b.appspot.com","apiKey":"AIzaSyDT6uHYQjMqr8NjFW5kpDcJEf3Oh4HDnzQ","authDomain":"portfolio-4470b.firebaseapp.com","messagingSenderId":"45401461044"})),
+    provideFirestore(() => getFirestore())
   ],
   providers: [],
   bootstrap: [AppComponent]

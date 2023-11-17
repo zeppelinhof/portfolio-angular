@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "portfolio-markus-gede",
+      "source": ".",
+      "frameworksBackend": {}
+    }
+  ]
+}

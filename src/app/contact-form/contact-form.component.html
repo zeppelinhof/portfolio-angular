@@ -1,4 +1,4 @@
-<form class="form-area" action="sendMail(event)" ngNativeValidate #myForm>
+<form class="form-area" (submit)="sendMail()" #myForm>
     <input required class="input-normal" type="text" placeholder="Your name" #nameField>
     <input required class="input-normal" type="email" placeholder="Your email" name="email">
     <textarea required placeholder="Your message" name="messageInput" #messageField></textarea>
@@ -19,3 +19,17 @@
         </div>
     </div>
 </form>
+
+<!-- NEU** -->
+<!-- <form >
+  <label>
+    Your email:
+    <input type="email" name="Nachricht">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+
+  <button type="submit">Send</button>
+</form> -->
