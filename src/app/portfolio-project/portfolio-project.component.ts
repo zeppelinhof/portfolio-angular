@@ -26,9 +26,9 @@ export class PortfolioProjectComponent {
   ];
 
   public projExplTxt: string[] = [
-    'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
-    'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
-    'A very Simple Customer Relationship Management system working with CRUD functionality.'
+    'Jump-and-run-Spiel basierend auf einem objektorientierten Ansatz. Hilf Pepe, Münzen und Salsa-Flaschen zu finden, um gegen die verrückte Henne zu kämpfen.',
+    'Aufgabenmanager - inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mithilfe von Drag-and-Drop-Funktionen, weisen Sie Benutzer und Kategorien zu.',
+    'Ein sehr einfaches Customer-Relationship-Management-System, das mit CRUD-Funktionalität arbeitet.'
     // 'Based on the PokeAPI a simple library that provides and catalogues pokemon information.'
   ];
 

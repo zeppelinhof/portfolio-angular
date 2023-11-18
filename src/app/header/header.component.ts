@@ -26,7 +26,8 @@ export class HeaderComponent implements OnInit {
     this.scrollservice.scrollTo(elementid);
   }
 
-  menuChange() {
+  
+  burgerMenuChange() {
     if (this.showVar == true) {
       this.scrollservice.updateData(false);
     } else {

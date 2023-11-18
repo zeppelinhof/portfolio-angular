@@ -18,9 +18,11 @@ export class FireMessagesService {
     return collection(this.firestore, 'messages');
   }
 
+
   getSingleDocRef(colId: string, docId: string) {
     return doc(collection(this.firestore, colId), docId);
   }
+
 
   async addMessage(item: {}) {
     await addDoc(this.getMessageRef(), item).catch(
@@ -30,6 +32,7 @@ export class FireMessagesService {
     )
   }
 
+  
   async updateMessages(item: {}) {
     if (this.docId) {
       await updateDoc(this.getSingleDocRef(this.colId, this.docId), item).catch(

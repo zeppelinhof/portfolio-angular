@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AboutMeComponent {
   public amContent: string[] =
-    ['Some personal thing to share(...) Donec ut imperdiet diam, et convallis neque. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      'This is other personal thing to share(...) It is windy. Here I will add some text and this will appear on my curriculum vitae. Thats just to test and so on.'];
+    ['Ich besitze bereits ein Bachelorstudium der Wirtschaftsinformatik. Dies habe ich im Rahmen meines dualen Studiums bei der damaligen Postbank Systems in Bonn gemacht.',
+      'In meiner Freizeit lese ich gerne gute Bücher oder gehe mit meiner lieben Ehefrau im schönen nahegelegenen Wald spazieren.'];
   public images: string[] = ['assets/img/bulb_desktop.svg', 'assets/img/puzzle_desktop.svg'];
 }

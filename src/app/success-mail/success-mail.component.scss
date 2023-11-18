@@ -17,6 +17,9 @@
         margin-right: 25px;
         font-size: 45px;
     }
+    @media(max-height:500px){
+        margin-top: 150px;
+    }
 }
 
 .container:after {

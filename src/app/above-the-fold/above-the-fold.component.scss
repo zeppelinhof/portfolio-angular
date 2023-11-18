@@ -70,7 +70,7 @@
     // line-height: 120%;
     height: 260px;
 
-    @media (max-width: 900px){
+    @media (max-width: 900px), (max-height: 700px){
         font-size: 32px !important;
     }
 }
@@ -83,7 +83,7 @@
     font-weight: 700;
     line-height: 120%;
 
-    @media (max-width: 900px){
+    @media (max-width: 900px), (max-height: 700px){
         font-size: 45px !important;
     }
 }
@@ -96,7 +96,7 @@
     font-weight: 400;
     line-height: 120%;
 
-    @media (max-width: 900px){
+    @media (max-width: 900px), (max-height: 700px){
         font-size: 30px !important;
     }
 }

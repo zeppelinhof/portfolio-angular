@@ -61,7 +61,7 @@ textarea:focus {
     align-items: flex-start;
     gap: 12px;
     // background-color: yellow;
-    width: 100%;
+    width: calc($viewport/2 - $distance-100);
 
     @media(max-width: 900px) {
         align-items: center;
