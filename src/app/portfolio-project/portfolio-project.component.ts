@@ -11,10 +11,10 @@ export class PortfolioProjectComponent {
   @Input() projectIndex: number = 0;
 
   public imagesComputers: string[] = [
-    '../../assets/img/projects/laptop_ohne_Hintergrund/pollo_loco_begin.svg',
-    '../../assets/img/projects/laptop_ohne_Hintergrund/join_begin.svg',
-    '../../assets/img/projects/laptop_ohne_Hintergrund/crm_begin.svg'
-    // '../../assets/img/projects/laptop_ohne_Hintergrund/pokedex_begin.svg'
+    'assets/img/projects/laptop_ohne_Hintergrund/pollo_loco_begin.svg',
+    'assets/img/projects/laptop_ohne_Hintergrund/join_begin.svg',
+    'assets/img/projects/laptop_ohne_Hintergrund/crm_begin.svg'
+    // 'assets/img/projects/laptop_ohne_Hintergrund/pokedex_begin.svg'
   ];
 
   public projTitle: string[] = [
