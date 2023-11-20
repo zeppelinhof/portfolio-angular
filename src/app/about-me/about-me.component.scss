@@ -11,6 +11,7 @@
     @media(max-width: 900px) {
         flex-direction: column-reverse;
         margin-left: $distance-25;
+        margin-top: 0;
     }
 }
 
@@ -45,10 +46,7 @@
     justify-content: center;
     width: 990px;
     height: 500px;
-    // height: 700px;
     z-index: -1;
-    // background-color: yellow;
-    // overflow: hidden;
 
     @media(max-width: 900px) {
         width: 100vw;
@@ -61,7 +59,18 @@
         max-width: 100%;
         max-height: 100%;
         z-index: -1;
+
+        @media(max-width: 900px) {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 90%);
+        }
+
+        @media(max-width: 440px) {
+            clip-path: polygon(0 0, 100% 0, 100% 65%, 0 90%);
+        }
+
     }
+
+
 
     .markus_background {
         position: absolute;
@@ -74,10 +83,8 @@
 
 .gray-under-markus-wrapper {
     position: relative;
-    // background-color: yellow;
     height: 100px;
 
-    // z-index: 1;
     @media(max-width: 900px) {
         z-index: 1;
     }

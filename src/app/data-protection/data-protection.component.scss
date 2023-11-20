@@ -1,7 +1,14 @@
+@import 'src/app/app.component.scss';
+
 .container{
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: $distance-100;
+    margin-right: $distance-100;
     margin-top: 200px;
     color: white;
     font-family: 'Poppins';
+
+    @media (max-width: 900px) {
+        margin-left: $distance-25;
+        margin-right: $distance-25;
+    }
 }
