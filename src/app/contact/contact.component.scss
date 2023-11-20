@@ -61,6 +61,10 @@
     margin-right: $distance-100;
     margin-bottom: $distance-100;
 
+    &:hover{
+        filter: url(#blue-filter);
+    }
+
     @media(max-width: 900px) {
         margin-right: $distance-25;
         margin-bottom: $distance-25;

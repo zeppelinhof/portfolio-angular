@@ -9,9 +9,9 @@ import { ScrollServiceService } from '../scroll.service.service';
 export class ContactOptionsComponent {
   constructor(private scrollservice: ScrollServiceService){}
   images: string[] = [
-    '../assets/img/git-Default.svg',
-    '../assets/img/mail-Default.svg',
-    '../assets/img/in-Default.svg'
+    'assets/img/git-Default.svg',
+    'assets/img/mail-Default.svg',
+    'assets/img/in-Default.svg'
   ];
 
   links: string[] = [

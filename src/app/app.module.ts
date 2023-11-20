@@ -23,6 +23,8 @@ import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.componen
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { SuccessMailComponent } from './success-mail/success-mail.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { SuccessMailComponent } from './success-mail/success-mail.component';
     MatCheckboxModule,
     FormsModule,
     ReactiveFormsModule,
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
     provideFirebaseApp(() => initializeApp({"projectId":"portfolio-4470b","appId":"1:45401461044:web:36e3d17cac1647b605d561","storageBucket":"portfolio-4470b.appspot.com","apiKey":"AIzaSyDT6uHYQjMqr8NjFW5kpDcJEf3Oh4HDnzQ","authDomain":"portfolio-4470b.firebaseapp.com","messagingSenderId":"45401461044"})),
     provideFirestore(() => getFirestore())
   ],

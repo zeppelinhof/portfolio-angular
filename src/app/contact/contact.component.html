@@ -2,26 +2,37 @@
     <div class="headline-text-line">
         <div class="emptySpace"></div>
         <div class="headline-text">Kontakt</div>
-            <div class="blue-line"></div>
+        <div class="blue-line"></div>
+    </div>
+</div>
+
+
+<div class="content">
+    <div class="grid-container">
+        <div style="display: flex; align-items: center;">
+            <div class="green-line"></div>
         </div>
+        <div class="smaller-headline">Ein Problem zu lösen?</div>
+        <div class="emptySpace"></div>
+        <div class="normal-white-text">
+            Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, Sie zu hören, Ihre Ideen
+            kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen. <br><br>
+            Brauchen Sie einen Frontend-Entwickler? <b>Kontaktieren Sie mich!</b></div>
     </div>
 
+    <app-contact-form></app-contact-form>
+</div>
 
-    <div class="content">
-        <div class="grid-container">
-            <div style="display: flex; align-items: center;">
-                <div class="green-line"></div>
-            </div>
-            <div class="smaller-headline">Ein Problem zu lösen?</div>
-            <div class="emptySpace"></div>
-            <div class="normal-white-text">
-                Kontaktieren Sie mich über dieses Formular. Ich bin daran interessiert, Sie zu hören, Ihre Ideen
-                kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen. <br><br>
-                Brauchen Sie einen Frontend-Entwickler? <b>Kontaktieren Sie mich!</b></div>
-        </div>
+<div (click)="scroll('atf')" class="go-up-arrow"><img src="assets/img/go-up-btn.svg" style="cursor: pointer;">
+</div>
 
-        <app-contact-form></app-contact-form>
-    </div>
 
-    <div (click)="scroll('atf')" class="go-up-arrow"><img src="assets/img/go-up-btn.svg" style="cursor: pointer;">
-    </div>
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="blue-filter" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="
+          0 0 0 0 0.000
+          0 0 0 0 0.745
+          0 0 0 0 0.910
+          0 0 0 1 0" />
+    </filter>
+</svg>
