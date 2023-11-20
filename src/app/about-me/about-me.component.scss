@@ -28,6 +28,10 @@
     flex-direction: column;
     color: white;
     gap: 35px;
+
+    @media(max-width: 900px) {
+        margin-right: $distance-25;
+    }
 }
 
 .am-content-thingsToShare {

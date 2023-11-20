@@ -14,7 +14,9 @@
 
 .languages-area {
     display: flex;
-    gap: 91px;
+    justify-content: space-between;
+    width: 100%;
+    margin-right: 100px;
 
     .language-column {
         display: flex;
@@ -55,6 +57,14 @@
         }
 
     }
+
+    @media (max-width: 900px) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        background-color: yellow;
+        margin-right: $distance-25;
+    }
 }
 
 .skill-text-area {
@@ -94,7 +104,7 @@
     .around-btn {
         margin-right: $distance-100;
 
-        @media(max-width: 900px){
+        @media(max-width: 900px) {
             margin-right: $distance-25;
         }
     }
