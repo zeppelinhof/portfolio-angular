@@ -32,6 +32,8 @@ $viewport: 100vw;
         color: white;
         font-family: 'Poppins';
         resize: none;
+        overflow-y: hidden;
+        transition: all 300ms ease-out;
 
         @media(max-width: 900px) {
             width: 100%;
@@ -39,20 +41,26 @@ $viewport: 100vw;
     }
 }
 
+.input-normal:hover,
+textarea:hover {
+    border: 1px solid #1CE6B6 !important;
+    // outline: none !important;
+}
+
 .input-normal::placeholder {
     color: white;
 }
 
-.input-normal:focus {
-    outline: none;
+.border-red {
+    border: 1px solid #E61C40 !important;
+}
+
+.border-green {
+    border: 1px solid #70E61C !important;
 }
 
 textarea::placeholder {
     color: white;
-}
-
-textarea:focus {
-    outline: none;
 }
 
 .check-send-area {
@@ -66,7 +74,7 @@ textarea:focus {
     @media(max-width: 900px) {
         align-items: center;
         gap: 32px;
-
+        width: 100%;
     }
 
 }
@@ -83,17 +91,30 @@ textarea:focus {
         cursor: pointer;
     }
 
-    .read-text {
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17px;
-        letter-spacing: 0em;
-        text-align: left;
+    .read-text-wrap {
+        display: flex;
+        flex-direction: column;
+        height: 54px;
+        gap: 8px;
 
-        a {
-            text-decoration: none;
+        .read-text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 17px;
+            letter-spacing: 0em;
+            text-align: left;
+
+            a {
+                text-decoration: none;
+            }
+        }
+
+        .missing-checked-information-text{
+            color: #E61C40 !important;
         }
     }
+
+
 }
 
 .gray-btn-wrap {
@@ -111,6 +132,37 @@ textarea:focus {
     gap: 10px;
     color: white;
     border-radius: 10px;
-    background: #B6B6B6;
+    background-color: #B6B6B6;
     cursor: pointer;
+}
+
+.gray-btn-blue {
+    background-color: #00BEE8 !important;
+}
+
+.field-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 80px;
+    width: 100%;
+    gap: 10px;
+
+    img {
+        position: absolute;
+        left: calc($viewport/2 - $distance-100 - 50px);
+        top: 12px;
+        height: 25px;
+
+        @media(max-width: 900px) {
+            left: calc($viewport/2 - $distance-25);
+            left: calc(100% - $distance-25 - 25px);
+        }
+
+    }
+}
+
+.missing-information {
+    font-size: 14px;
+    color: #E61C40;
 }

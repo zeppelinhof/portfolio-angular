@@ -42,12 +42,12 @@ export class PortfolioProjectComponent {
   public gitLinks: string[] = [
     'https://github.com/zeppelinhof/el_pollo_loco.git',
     'https://github.com/zeppelinhof/Join-Markus.git',
-    'https://github.com/zeppelinhof/Join-Markus.git'   // to be changed to Simple CRM    
+    ''   // to be changed to Simple CRM    
   ]
 
   public livetestLinks: string[] = [
     'http://markus-gede.developerakademie.net/el_pollo_loco/index.html',
     'http://markus-gede.developerakademie.net/Join-Markus/index.html',
-    'http://markus-gede.developerakademie.net/Join-Markus/index.html'
+    ''
   ]
 }
