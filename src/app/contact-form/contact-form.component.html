@@ -12,7 +12,7 @@
     <img *ngIf="containsValidEmailPattern(inputMaildaddress)" src="assets/img/form/fieldFilled.svg">
     <img *ngIf="containsValidEmailPattern(inputMaildaddress) == false && sendButtonClicked"
       src="assets/img/form/fieldNotFilled.svg">
-    <div *ngIf="missingEmail" class="missing-information">Bitte Ihre E-Mail-Adresse eintragen</div>
+    <div *ngIf="containsValidEmailPattern(inputMaildaddress) == false && sendButtonClicked" class="missing-information">Bitte Ihre E-Mail-Adresse eintragen</div>
   </div>
   <div class="field-wrap">
     <textarea [(ngModel)]="inputMessage" required placeholder="Ihre Nachricht" name="messageInput" id="mf"

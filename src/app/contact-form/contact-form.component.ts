@@ -20,6 +20,7 @@ export class ContactFormComponent {
   inputMessage: string = '';
   missingName: Boolean = false;
   missingEmail: Boolean = false;
+  resultEmail: boolean = false;
   missingMessage: Boolean = false;
   sendButtonClicked: Boolean = false;
   showCheckMessage: Boolean = false;
@@ -36,36 +37,39 @@ export class ContactFormComponent {
       this.firemessage.addMessage({ 'Name': mail, 'Mailaddress': mail, 'Message': message });
       this.router.navigate(['/success-mail']);
     } else {
-      if (this.inputName == '') {
-        this.missingName = true;
-        this.borderToRed('nf');
-      }
-      if (this.inputMaildaddress == '') {
-        this.missingEmail = true;
-        this.borderToRed('ef');
-      }
-      if (this.inputMessage == '') {
-        this.missingMessage = true;
-        this.borderToRed('mf');
-      }
+      this.checkEachInputfieldsIfFilled()
     }
   }
 
   allFieldsFilled(): Boolean {
-    return this.inputName != '' && this.inputMaildaddress != '' && this.inputMessage != '';
+    return this.inputName != '' && this.containsValidEmailPattern(this.inputMaildaddress) && this.inputMessage != '';
+  }
+
+  checkEachInputfieldsIfFilled(){
+    if (this.inputName == '') {
+      this.missingName = true;
+      this.borderToRed('nf');
+    }
+    if (this.inputMaildaddress == '') {
+      this.missingEmail = true;
+      this.borderToRed('ef');
+    }
+    if (this.inputMessage == '') {
+      this.missingMessage = true;
+      this.borderToRed('mf');
+    }
   }
 
   borderToRed(elementId: string) {
-    // this.nameField.nativeElement.classList.add('border-red');
     document.getElementById(elementId)?.classList.add('border-red');
-    // this.nameField.nativeElement.classList.add('border-red');
+
   }
 
   containsValidEmailPattern(input: string): boolean {
     const atIndex = input.indexOf('@');
     const dotIndex = input.lastIndexOf('.');
-
-    return atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < input.length - 1;
+    this.resultEmail = atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < input.length - 1;
+    return this.resultEmail;
   }
 
 
