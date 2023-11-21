@@ -1,5 +1,6 @@
 @import '../app.component.scss';
-$viewport: 100vw;
+
+$viewport: min(100vw, 1440px);
 
 .form-area {
     display: flex;
@@ -162,6 +163,14 @@ textarea::placeholder {
         }
 
     }
+}
+
+.height-200{
+    height: 200px;
+}
+
+.height-100prct{
+    height: 100%;
 }
 
 .missing-information {

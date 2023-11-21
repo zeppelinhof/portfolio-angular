@@ -1,12 +1,14 @@
 @import '../app.component.scss';
 
+$viewport: min(100vw, 1440px);
+
 $header-height: 80px;
 $padding-top-bottom: 37px;
 
 header {
     position: fixed;
-    left: 0;
-    right: 0;
+    left: calc((100vw - $viewport) / 2);
+    right: calc((100vw - $viewport) / 2);
     top: 0;
     height: $header-height;
     z-index: 4;
@@ -17,6 +19,7 @@ header {
     backdrop-filter: blur(32.5px);
 
     @media(max-width: 900px) {
+        width: calc($viewport - (2 *  $distance-25));
         padding: $padding-top-bottom $distance-25;
     }
 }

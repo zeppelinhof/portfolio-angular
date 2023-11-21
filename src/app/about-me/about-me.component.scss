@@ -1,5 +1,7 @@
 @import '../app.component.scss';
 
+$viewport: min(100vw, 1440px);
+
 .content {
     display: flex;
     position: relative;
@@ -49,7 +51,7 @@
     z-index: -1;
 
     @media(max-width: 900px) {
-        width: 100vw;
+        width: $viewport;
         left: -$distance-25;
     }
 
@@ -94,7 +96,7 @@
     position: absolute;
     left: 0;
     top: -200px;
-    width: 100vw;
+    width: $viewport;
     height: 740px;
     overflow: hidden;
     z-index: -1;

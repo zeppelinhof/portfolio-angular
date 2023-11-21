@@ -18,10 +18,7 @@ export class ContactFormComponent {
   inputName: string = '';
   inputMaildaddress: string = '';
   inputMessage: string = '';
-  missingName: Boolean = false;
-  missingEmail: Boolean = false;
   resultEmail: boolean = false;
-  missingMessage: Boolean = false;
   sendButtonClicked: Boolean = false;
   showCheckMessage: Boolean = false;
 
@@ -45,24 +42,48 @@ export class ContactFormComponent {
     return this.inputName != '' && this.containsValidEmailPattern(this.inputMaildaddress) && this.inputMessage != '';
   }
 
-  checkEachInputfieldsIfFilled(){
-    if (this.inputName == '') {
-      this.missingName = true;
+  checkEachInputfieldsIfFilled() {
+    this.checkNameInput();
+    this.checkMessageInput();
+    this.checkMessageInput();
+  }
+
+  checkNameInput() {
+    if (this.inputName == '' && this.sendButtonClicked) {
       this.borderToRed('nf');
+      return false
     }
-    if (this.inputMaildaddress == '') {
-      this.missingEmail = true;
+    this.borderNotRed('nf');
+    return true;
+  }
+
+  checkMailInput() {
+    if (!this.containsValidEmailPattern(this.inputMaildaddress) && this.sendButtonClicked) {
       this.borderToRed('ef');
+      return false
     }
-    if (this.inputMessage == '') {
-      this.missingMessage = true;
+    this.borderNotRed('ef');
+    return true;
+  }
+
+  checkMessageInput() {
+    if (this.inputMessage == '' && this.sendButtonClicked) {
       this.borderToRed('mf');
+      return false;
     }
+    this.borderNotRed('mf');
+    return true;
   }
 
   borderToRed(elementId: string) {
     document.getElementById(elementId)?.classList.add('border-red');
+  }
 
+  borderNotRed(elementId: string) {
+    let element = document.getElementById(elementId)?.classList
+    if(element?.contains('border-red')){
+      element.remove('border-red');
+    }
   }
 
   containsValidEmailPattern(input: string): boolean {
@@ -74,11 +95,11 @@ export class ContactFormComponent {
 
 
   changeCheckbox() {
-    // this.isChecked == true ? false : true;
     if (this.isChecked) {
       this.isChecked = false;
     } else {
       this.isChecked = true;
+      this.showCheckMessage = false;
     }
   }
 

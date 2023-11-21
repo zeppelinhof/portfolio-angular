@@ -1,7 +1,7 @@
 @import '../app.component.scss';
 
+$viewport: min(100vw, 1440px);
 $grid-gap: 12px;
-$viewport: 100vw;
 
 .content {
     margin-top: 100px;
@@ -23,14 +23,18 @@ $viewport: 100vw;
     display: flex;
     justify-content: center;
     $box-width: calc($viewport/2 - $distance-100 - $grid-gap);
+    $max-box-width: calc(100vh - 220px);  // 200px belongs to header
+    $box-width: min($box-width, $max-box-width);
 
     @media(max-width: 900px) {
         $box-width: calc($viewport/2 - $distance-25 - $grid-gap);
+        $box-width: min($box-width, $max-box-width);
     }
 
     .portfolio-projects {
         display: grid;
-        grid-gap: $grid-gap;
+        column-gap: max(calc($viewport - (2 * $box-width) -  (2 * $distance-100)), $grid-gap);
+        row-gap: $grid-gap;
         grid-template-columns: $box-width $box-width;
     }
 }

@@ -1,27 +1,28 @@
-<div class="form-area" (submit)="sendMail()" #myForm>
+<div class="form-area" #myForm>
   <div class="field-wrap">
     <input [(ngModel)]="inputName" required class="input-normal" type="text" placeholder="Ihr Name" id="nf" #nameField
       [ngClass]="{'border-green': inputName !== ''}">
     <img *ngIf="inputName !== ''" src="assets/img/form/fieldFilled.svg">
-    <img *ngIf="missingName && inputName == ''" src="assets/img/form/fieldNotFilled.svg">
-    <div *ngIf="missingName" class="missing-information">Bitte Ihren Namen eintragen</div>
+    <img *ngIf="!checkNameInput()" src="assets/img/form/fieldNotFilled.svg">
+    <div *ngIf="!checkNameInput()" class="missing-information">Bitte Ihren Namen eintragen</div>
   </div>
   <div class="field-wrap">
     <input [(ngModel)]="inputMaildaddress" required class="input-normal" type="email" placeholder="Ihre E-Mail-Adresse"
       name="email" id="ef" [ngClass]="{'border-green': containsValidEmailPattern(inputMaildaddress)}">
     <img *ngIf="containsValidEmailPattern(inputMaildaddress)" src="assets/img/form/fieldFilled.svg">
-    <img *ngIf="containsValidEmailPattern(inputMaildaddress) == false && sendButtonClicked"
-      src="assets/img/form/fieldNotFilled.svg">
-    <div *ngIf="containsValidEmailPattern(inputMaildaddress) == false && sendButtonClicked" class="missing-information">Bitte Ihre E-Mail-Adresse eintragen</div>
+    <img *ngIf="!checkMailInput()" src="assets/img/form/fieldNotFilled.svg">
+    <div *ngIf="!checkMailInput()" class="missing-information">Bitte Ihre E-Mail-Adresse eintragen</div>
   </div>
-  <div class="field-wrap">
-    <textarea [(ngModel)]="inputMessage" required placeholder="Ihre Nachricht" name="messageInput" id="mf"
-      [ngClass]="{'border-green': containsValidEmailPattern(inputMessage)}"
+  <div class="field-wrap height-200">
+    <textarea class="height-100prct" [(ngModel)]="inputMessage" required placeholder="Ihre Nachricht" name="messageInput" id="mf"
+      [ngClass]="{'border-green': inputMessage !== ''}"
       (keyup.enter)="sendToFirebase(inputName,inputMaildaddress,inputMessage)" #messageField></textarea>
     <img *ngIf="inputMessage !== ''" src="assets/img/form/fieldFilled.svg">
-    <img *ngIf="missingMessage && inputMessage == ''" src="assets/img/form/fieldNotFilled.svg">
-    <div *ngIf="missingMessage" class="missing-information">Bitte Ihre Nachricht eintragen</div>
+    <img *ngIf="!checkMessageInput()" src="assets/img/form/fieldNotFilled.svg">
+    <div *ngIf="!checkMessageInput()" class="missing-information">Bitte Ihre Nachricht eintragen</div>
   </div>
+
+
   <div class="check-send-area">
     <div class="read-area">
       <div (click)="changeCheckbox()" class="check-text">
@@ -33,7 +34,8 @@
           <div class="read-text">Ich habe die &nbsp;<a style="color: #4B47FF;" routerLink="/data-protection">
               Datenschutzrichtlinien</a>&nbsp; gelesen und bin mit der beschriebenen Verarbeitung meiner Daten
             einverstanden.</div>
-          <div class="missing-checked-information-text" *ngIf="showCheckMessage">Bitte akzeptieren Sie die Datenschutzrichtlinien.</div>
+          <div class="missing-checked-information-text" *ngIf="showCheckMessage">Bitte akzeptieren Sie die
+            Datenschutzrichtlinien.</div>
         </div>
       </div>
     </div>
