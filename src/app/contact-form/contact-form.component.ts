@@ -21,6 +21,7 @@ export class ContactFormComponent {
   resultEmail: boolean = false;
   sendButtonClicked: Boolean = false;
   showCheckMessage: Boolean = false;
+  messageId:string = new Date().toLocaleString();
 
   constructor(private firemessage: FireMessagesService, private router: Router) { }
 
@@ -31,7 +32,7 @@ export class ContactFormComponent {
       this.showCheckMessage = true;
     }
     if (this.allFieldsFilled() && this.isChecked) {
-      this.firemessage.addMessage({ 'Name': mail, 'Mailaddress': mail, 'Message': message });
+      this.firemessage.addMessage({ 'Name': name, 'Mailaddress': mail, 'Message': message }, name + ': ' + this.messageId);
       this.router.navigate(['/success-mail']);
     } else {
       this.checkEachInputfieldsIfFilled()

@@ -1,9 +1,11 @@
+$viewport: min(100vw, 1440px);
+
 .container {
     position: absolute;
     top: 10%;
     display: flex;
     align-items: center;
-    left: 100px;
+    left: calc((100vw - $viewport) / 2);
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 200px;
@@ -16,10 +18,10 @@
     @media(max-width: 900px) {
         margin-left: 25px;
         margin-right: 25px;
-        left: 0px;
         font-size: 45px;
     }
-    @media(max-height:500px){
+
+    @media(max-height:500px) {
         margin-top: 150px;
     }
 }
