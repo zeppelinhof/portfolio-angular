@@ -2,7 +2,6 @@ import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { FireMessagesService } from '../fire-messages.service';
 import { Router } from '@angular/router';
 
-
 @Component({
   selector: 'app-contact-form',
   templateUrl: './contact-form.component.html',
