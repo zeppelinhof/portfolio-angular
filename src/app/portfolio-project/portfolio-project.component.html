@@ -1,11 +1,11 @@
-<div class="wrap-background-explaination">
+<div class="wrap-background-explaination" (click)="openLink($event)">
     <div class="computer-standard" style="background-image: url({{imagesComputers[projectIndex]}});">
-        
+
     </div>
     <div class="project-explaination">
         <div class="test-buttons hide-mobile">
-            <a href="{{gitLinks[projectIndex]}}"target="_blank" class="btn">Github</a>
-            <a href="{{livetestLinks[projectIndex]}}"target="_blank" class="btn-live-test">Live test</a>
+            <a href="{{gitLinks[projectIndex]}}" target="_blank" class="btn">Github</a>
+            <a href="{{livetestLinks[projectIndex]}}" target="_blank" class="btn-live-test">Live test</a>
         </div>
         <div class="white-explaination-box">
             <div class="project-title">{{projTitle[projectIndex]}}</div>

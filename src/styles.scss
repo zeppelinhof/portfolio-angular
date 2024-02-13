@@ -2,9 +2,6 @@ html {
     scroll-behavior: smooth;
     display: flex;
     justify-content: center;
-    
-    
-    
 }
 
 body {
@@ -17,21 +14,9 @@ body {
     max-width: 1440px;
 }
 
-body::-webkit-scrollbar {
-    width: 0px;
+::-webkit-scrollbar {
+    width: 10px;
 }
-
-body::-webkit-scrollbar-thumb {
-    background-color: transparent;
-    border-radius: 3px;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: transparent; /* Farbe des Scrollbalken-Tracks */
-}
-
-
-
 
 .headline-text {
     color: white;

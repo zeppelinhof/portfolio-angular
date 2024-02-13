@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 import { PortfolioComponent } from '../portfolio/portfolio.component';
 
 @Component({
@@ -8,7 +8,12 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
 })
 export class PortfolioProjectComponent {
 
+  screenWidth: number;
   @Input() projectIndex: number = 0;
+
+  constructor(){
+    this.screenWidth = window.innerWidth;
+  }
 
   public imagesComputers: string[] = [
     'assets/img/projects/laptop_ohne_Hintergrund/pollo_loco_begin.svg',
@@ -49,4 +54,25 @@ export class PortfolioProjectComponent {
     'http://markus-gede.developerakademie.net/Join-Markus/index.html',
     'http://markus-gede.developerakademie.net/angular-projects/da-bubble/index.html'
   ]
+
+  
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: Event) {
+    this.screenWidth = window.innerWidth;
+  }
+
+  isScreenSizeLessThan900(): boolean {
+    return this.screenWidth < 900;
+  }
+
+  openLink(event: Event): void {
+    debugger
+    if (this.isScreenSizeLessThan900()) {
+      const livetestLink = this.livetestLinks[this.projectIndex];
+      if (livetestLink) {
+        window.open(livetestLink, '_blank');
+      }
+    }
+  }
 }
