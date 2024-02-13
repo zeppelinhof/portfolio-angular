@@ -8,12 +8,8 @@ import { PortfolioComponent } from '../portfolio/portfolio.component';
 })
 export class PortfolioProjectComponent {
 
-  screenWidth: number;
   @Input() projectIndex: number = 0;
 
-  constructor(){
-    this.screenWidth = window.innerWidth;
-  }
 
   public imagesComputers: string[] = [
     'assets/img/projects/laptop_ohne_Hintergrund/pollo_loco_begin.svg',
@@ -50,24 +46,18 @@ export class PortfolioProjectComponent {
   ]
 
   public livetestLinks: string[] = [
-    'http://markus-gede.developerakademie.net/el_pollo_loco/index.html',
-    'http://markus-gede.developerakademie.net/Join-Markus/index.html',
-    'http://markus-gede.developerakademie.net/angular-projects/da-bubble/index.html'
+    'https://pollo-loco.markus-gede.de/index.html',
+    'https://join.markus-gede.de/index.html',
+    'https://dabubble.markus-gede.de/index.html'
   ]
 
   
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: Event) {
-    this.screenWidth = window.innerWidth;
-  }
-
   isScreenSizeLessThan900(): boolean {
-    return this.screenWidth < 900;
+    return window.innerWidth <= 900;
   }
 
   openLink(event: Event): void {
-    debugger
     if (this.isScreenSizeLessThan900()) {
       const livetestLink = this.livetestLinks[this.projectIndex];
       if (livetestLink) {
