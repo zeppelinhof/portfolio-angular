@@ -2,6 +2,10 @@
 
 $viewport: min(100vw, 1440px);
 
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+  }
+
 .form-area {
     display: flex;
     flex-direction: column;
@@ -119,6 +123,29 @@ textarea::placeholder {
 
 
 }
+.form-group{
+    width: calc(min(100vw, 1440px) / 2 - 100px);
+}
+
+.form-control{
+    background-color: transparent;
+    border: 1px solid #4B47FF;
+    color: white;
+    font-family: "Poppins";
+
+    &:hover{
+        border: 1px solid #1CE6B6 !important;
+    }
+}
+
+.form-control::placeholder{
+    color: white;
+}
+
+.form-check{
+    margin-bottom: 24px;
+    padding-left: 0;
+}
 
 .gray-btn-wrap {
     height: 50px;
@@ -137,6 +164,11 @@ textarea::placeholder {
     border-radius: 10px;
     background-color: #B6B6B6;
     cursor: pointer;
+}
+
+.btn-primary{
+    padding: 24px;
+    background-color: #B6B6B6;
 }
 
 .gray-btn-blue {
@@ -176,4 +208,10 @@ textarea::placeholder {
 .missing-information {
     font-size: 14px;
     color: #E61C40;
+}
+
+@media (max-width: 900px) {
+    .form-group{
+        width: 100%;
+    }
 }

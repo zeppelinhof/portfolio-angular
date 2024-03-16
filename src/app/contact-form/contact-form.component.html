@@ -1,4 +1,4 @@
-<div class="form-area" #myForm>
+<!-- <div class="form-area" #myForm>
   <div class="field-wrap">
     <input [(ngModel)]="inputName" required class="input-normal" type="text" placeholder="Ihr Name" id="nf" #nameField
       [ngClass]="{'border-green': inputName !== ''}">
@@ -14,8 +14,8 @@
     <div *ngIf="!checkMailInput()" class="missing-information">Bitte Ihre E-Mail-Adresse eintragen</div>
   </div>
   <div class="field-wrap height-200">
-    <textarea class="height-100prct" [(ngModel)]="inputMessage" required placeholder="Ihre Nachricht" name="messageInput" id="mf"
-      [ngClass]="{'border-green': inputMessage !== ''}"
+    <textarea class="height-100prct" [(ngModel)]="inputMessage" required placeholder="Ihre Nachricht"
+      name="messageInput" id="mf" [ngClass]="{'border-green': inputMessage !== ''}"
       (keyup.enter)="sendToFirebase(inputName,inputMaildaddress,inputMessage)" #messageField></textarea>
     <img *ngIf="inputMessage !== ''" src="assets/img/form/fieldFilled.svg">
     <img *ngIf="!checkMessageInput()" src="assets/img/form/fieldNotFilled.svg">
@@ -43,22 +43,65 @@
       <div type="submit" class="gray-btn"
         [ngClass]="{'gray-btn-blue': isChecked && inputName !== '' && inputMaildaddress !== '' && inputMessage !== ''}"
         (click)="sendToFirebase(inputName,inputMaildaddress,inputMessage)" #sendButton>Send
-        message :)</div> <!-- routerLink="/success-mail" -->
+        message :)</div>
     </div>
   </div>
-</div>
+</div> -->
+
+<div class="form-area" #myForm>
+  <form (ngSubmit)="onSubmit()" #f="ngForm">
+    <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+      <div class="field-wrap">
+        <div class="form-group">
+          <input placeholder="Ihr Name" type="text" id="username" class="form-control" ngModel name="username"
+            #username="ngModel" required>
+          <span *ngIf="username.touched && !username.valid" style="color: red;">Bitte Ihren Namen eintragen.</span>
+        </div>
+      </div>
+      <div class="field-wrap">
+        <div class="form-group">
+          <input placeholder="Ihre E-Mail-Adresse" type="text" id="email" class="form-control" ngModel name="email"
+            #email="ngModel" email required>
+          <span *ngIf="email.touched && !email.valid" style="color: red;">Bitte Ihre E-Mail-Adresse eintragen.</span>
+        </div>
+      </div>
+      <div class="field-wrap" style="margin-bottom: 36px;">
+        <div class="form-group">
+          <textarea placeholder="Ihre Nachricht an mich" type="text" id="message" class="form-control" ngModel
+            name="message" #message="ngModel" required></textarea>
+          <span *ngIf="message.touched && !message.valid" style="color: red;">Bitte Ihre Nachricht an mich
+            eintragen.</span>
+        </div>
+      </div>
+    </div>
 
 
+    <div class="form-check">
+      <div class="read-area">
+        <div (click)="changeCheckbox()" class="check-text">
+          <div>
+            <img *ngIf="isChecked" src="assets/img/form/checked_box.svg">
+            <img *ngIf="!isChecked" src="assets/img/form/check_box.svg">
+          </div>
+          <div class="read-text-wrap">
+            <div class="read-text">Ich habe die Datenschutzrichtlinien gelesen und bin <br> mit der beschriebenen Verarbeitung meiner Daten
+              einverstanden. <br> <a style="color: #4B47FF;" routerLink="/data-protection">
+                Datenschutzrichtlinien</a></div>
+            <div class="missing-checked-information-text" *ngIf="showCheckMessage">Bitte akzeptieren Sie die
+              Datenschutzrichtlinien.</div>
+          </div>
+        </div>
+      </div>
+    </div>
 
-<!-- <form >
-  <label>
-    Your email:
-    <input type="email" name="Nachricht">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label>
 
-  <button type="submit">Send</button>
-</form> -->
+    <!-- <button type="submit" class="btn btn-primary" [disabled]="!f.valid">Send message :)</button> -->
+    <div class="gray-btn-wrap">
+      <div type="submit" class="gray-btn"
+        [ngClass]="{'gray-btn-blue': isChecked && f.valid}"
+        (click)="sendToFirebase(inputName,inputMaildaddress,inputMessage)" #sendButton>Send
+        message :)</div>
+    </div>
+
+  </form>
+</div>/div

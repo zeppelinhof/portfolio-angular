@@ -20,11 +20,6 @@ export class FireMessagesService {
   }
 
   async addMessage(item: {}, messageId:string) {
-    // await addDoc(this.getMessageRef(), item).catch(
-    //   (err) => {console.log(err)}
-    // ).then(
-    //   (docRef)=>{console.log("Dokument geschrieben mit ID:", docRef?.id)}
-    // )
     await setDoc(doc(this.firestore, "messages", messageId), item);
   }
 
